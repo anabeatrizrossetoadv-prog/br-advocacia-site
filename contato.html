@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato | BR Advocacia – Jurídico para Negócios Digitais</title>
+<meta name="description" content="Fale com a BR Advocacia e envie sua situação para análise. Atendimento 100% online para negócios digitais em todo o Brasil.">
+<meta property="og:title" content="Contato – BR Advocacia">
+<meta property="og:description" content="Fale com a BR Advocacia e envie sua situação para análise. Atendimento 100% online para negócios digitais em todo o Brasil.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bradvocacia.com.br/contato">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #E6D9C8;
+    --dark: #1C1F18;
+    --verde: #4F5742;
+    --marrom: #533C2A;
+    --gold: #92652F;
+    --gold-light: #B07A3E;
+    --mid: #252820;
+    --text-muted: #8A7A68;
+    --border: rgba(146,101,47,0.25);
+    --border-strong: rgba(146,101,47,0.5);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--dark);
+    color: var(--cream);
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 9999; opacity: .35;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(28,31,24,.96); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; }
+  .nav-logo-img { height: 104px; width: auto; filter: invert(1) brightness(1.05); transition: opacity .3s; }
+  .nav-logo-img:hover { opacity: .75; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color .3s; }
+  .nav-links a:hover { color: var(--cream); }
+  .nav-links a.active { color: var(--cream); }
+  .nav-cta { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; padding: .65rem 1.5rem; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; transition: all .3s; }
+  .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+  /* HERO */
+  .page-hero {
+    padding: 9rem 4rem 5rem;
+    max-width: 1400px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: end;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    display: flex; align-items: center; gap: .75rem;
+    font-size: .7rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.75rem;
+    opacity: 0; animation: fadeUp .8s .2s forwards;
+  }
+  .eyebrow::before { content: ''; display: block; width: 2.5rem; height: 1px; background: var(--gold); }
+
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.6rem, 4.5vw, 3.8rem);
+    font-weight: 300; line-height: 1.1; margin-bottom: 1.25rem;
+    opacity: 0; animation: fadeUp .8s .35s forwards;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--gold); }
+
+  .page-hero > div > p {
+    font-size: .975rem; color: rgba(230,217,200,.65);
+    max-width: 32rem; line-height: 1.85; margin-bottom: 2rem;
+    opacity: 0; animation: fadeUp .8s .5s forwards;
+  }
+
+  .hero-buttons {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    opacity: 0; animation: fadeUp .8s .65s forwards;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--gold); color: var(--dark);
+    padding: 1rem 2rem; font-size: .8rem; font-weight: 500;
+    letter-spacing: .1em; text-transform: uppercase;
+    text-decoration: none; transition: all .3s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    border: 1px solid rgba(230,217,200,.25); color: var(--cream);
+    padding: 1rem 2rem; font-size: .8rem;
+    letter-spacing: .1em; text-transform: uppercase;
+    text-decoration: none; transition: all .3s;
+  }
+  .btn-secondary:hover { border-color: var(--cream); transform: translateY(-2px); }
+
+  /* HERO RIGHT — CONTACT CARDS */
+  .hero-right {
+    display: flex; flex-direction: column; gap: 1px;
+    opacity: 0; animation: fadeUp .8s .5s forwards;
+  }
+  .contact-channel {
+    display: flex; align-items: flex-start; gap: 1.25rem;
+    padding: 1.75rem 2rem;
+    background: rgba(146,101,47,.04);
+    border: 1px solid var(--border);
+    transition: border-color .3s, background .3s;
+    text-decoration: none;
+    color: inherit;
+  }
+  .contact-channel:hover { border-color: var(--border-strong); background: rgba(146,101,47,.07); }
+
+  .cc-icon {
+    width: 2.5rem; height: 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); flex-shrink: 0;
+  }
+  .cc-body { flex: 1; }
+  .cc-label { font-size: .65rem; letter-spacing: .15em; text-transform: uppercase; color: var(--gold); margin-bottom: .3rem; }
+  .cc-title { font-size: .95rem; color: var(--cream); margin-bottom: .2rem; }
+  .cc-sub { font-size: .8rem; color: rgba(230,217,200,.55); line-height: 1.5; }
+  .cc-arrow { color: var(--gold); opacity: .5; font-size: .85rem; align-self: center; }
+
+  /* MAIN GRID */
+  .contact-wrap {
+    max-width: 1400px; margin: 0 auto;
+    padding: 5rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  /* FORM */
+  .form-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem; font-weight: 300; margin-bottom: .6rem;
+    color: var(--cream);
+  }
+  .form-section h2 em { font-style: italic; color: var(--gold); }
+  .form-section > p {
+    font-size: .9rem; color: rgba(230,217,200,.6);
+    line-height: 1.8; margin-bottom: 2.5rem; max-width: 36rem;
+  }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+
+  .form-group { display: flex; flex-direction: column; gap: .5rem; }
+
+  .form-label {
+    font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .form-label span { color: var(--gold); }
+
+  .form-input, .form-select, .form-textarea {
+    background: rgba(146,101,47,.04);
+    border: 1px solid var(--border);
+    color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9rem;
+    padding: .85rem 1.1rem;
+    outline: none;
+    transition: border-color .3s, background .3s;
+    width: 100%;
+    -webkit-appearance: none;
+  }
+  .form-input::placeholder, .form-textarea::placeholder { color: rgba(230,217,200,.3); }
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--border-strong);
+    background: rgba(146,101,47,.07);
+  }
+
+  .form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8975A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.1rem center;
+    cursor: pointer;
+  }
+  .form-select option { background: #252820; color: var(--cream); }
+
+  .form-textarea { resize: vertical; min-height: 120px; line-height: 1.7; }
+
+  .form-check {
+    display: flex; align-items: flex-start; gap: .85rem; cursor: pointer;
+  }
+  .form-check input[type="checkbox"] {
+    width: 1rem; height: 1rem; flex-shrink: 0; margin-top: .2rem;
+    accent-color: var(--gold); cursor: pointer;
+  }
+  .form-check-label {
+    font-size: .8rem; color: rgba(230,217,200,.55); line-height: 1.7;
+  }
+  .form-check-label a { color: var(--gold); text-decoration: none; }
+  .form-check-label a:hover { text-decoration: underline; }
+
+  .form-submit {
+    display: inline-flex; align-items: center; gap: .75rem;
+    background: var(--gold); color: var(--dark);
+    border: none; cursor: pointer;
+    padding: 1.1rem 2.5rem; font-family: 'Montserrat', sans-serif;
+    font-size: .85rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+    transition: all .3s; align-self: flex-start;
+  }
+  .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .form-submit:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+  /* SUCCESS / ERROR states */
+  .form-success {
+    display: none;
+    padding: 2rem; background: rgba(146,101,47,.08);
+    border: 1px solid var(--border-strong);
+  }
+  .form-success.visible { display: block; }
+  .form-success h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; color: var(--gold-light); margin-bottom: .5rem;
+  }
+  .form-success p { font-size: .875rem; color: rgba(230,217,200,.7); line-height: 1.75; }
+
+  .form-error-msg {
+    display: none; padding: 1rem 1.25rem;
+    background: rgba(180,60,60,.08); border: 1px solid rgba(180,60,60,.3);
+    font-size: .825rem; color: rgba(230,217,200,.7); line-height: 1.65;
+  }
+  .form-error-msg.visible { display: block; }
+
+  .input-error { border-color: rgba(180,60,60,.5) !important; }
+  .error-msg { font-size: .75rem; color: rgba(200,100,100,.9); margin-top: -.25rem; }
+
+  /* SIDEBAR */
+  .contact-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+
+  .sidebar-block {
+    padding: 1.75rem;
+    border: 1px solid var(--border);
+    background: rgba(146,101,47,.03);
+  }
+
+  .sidebar-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400; color: var(--cream);
+    margin-bottom: .75rem; line-height: 1.3;
+  }
+  .sidebar-block p { font-size: .85rem; color: rgba(230,217,200,.6); line-height: 1.75; }
+
+  .sidebar-block .sb-label {
+    font-size: .65rem; letter-spacing: .15em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: .75rem; display: block;
+  }
+
+  .sb-hours { margin-top: 1rem; display: flex; flex-direction: column; gap: .35rem; }
+  .sb-hour-row {
+    display: flex; justify-content: space-between;
+    font-size: .8rem; padding-bottom: .35rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .sb-hour-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .sb-hour-row .day { color: rgba(230,217,200,.55); }
+  .sb-hour-row .time { color: var(--cream); }
+
+  .sb-promise-list { list-style: none; display: flex; flex-direction: column; gap: .5rem; margin-top: .75rem; }
+  .sb-promise-list li {
+    display: flex; gap: .75rem; align-items: flex-start;
+    font-size: .825rem; color: rgba(230,217,200,.65); line-height: 1.6;
+  }
+  .sb-promise-list li::before { content: '✓'; color: var(--gold); font-size: .7rem; flex-shrink: 0; margin-top: .2rem; }
+
+  /* MINI FAQ */
+  .mini-faq {
+    max-width: 1400px; margin: 0 auto;
+    padding: 0 4rem 5rem;
+    border-top: 1px solid var(--border);
+    padding-top: 4rem;
+  }
+  .mini-faq h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 300; margin-bottom: 2rem;
+    color: var(--cream);
+  }
+  .mini-faq h2 em { font-style: italic; color: var(--gold); }
+
+  .mfaq-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
+
+  .mfaq-item {
+    border: 1px solid var(--border); padding: 1.5rem;
+    transition: border-color .3s;
+  }
+  .mfaq-item:hover { border-color: var(--border-strong); }
+  .mfaq-item h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-weight: 400; color: var(--gold-light);
+    margin-bottom: .5rem; line-height: 1.4;
+  }
+  .mfaq-item p { font-size: .85rem; color: rgba(230,217,200,.6); line-height: 1.7; }
+
+  /* FOOTER */
+  footer {
+    background: #090906; border-top: 1px solid var(--border);
+    padding: 3rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--cream); }
+  .footer-logo span { color: var(--gold); }
+  .footer-logo-img { height: 96px; width: auto; opacity: .9; }
+  .footer-mid { font-size: .75rem; color: var(--text-muted); text-align: center; line-height: 1.6; }
+  .footer-right { text-align: right; }
+  .footer-right a { font-size: .75rem; color: var(--text-muted); text-decoration: none; display: block; margin-bottom: .3rem; transition: color .3s; }
+  .footer-right a:hover { color: var(--gold); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .appear { opacity: 0; transform: translateY(24px); transition: opacity .7s, transform .7s; }
+  .appear.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .contact-wrap { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-sidebar { flex-direction: row; flex-wrap: wrap; }
+    .sidebar-block { flex: 1; min-width: 240px; }
+    .mfaq-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 960px) {
+    nav { padding: 1.2rem 2rem; }
+    .nav-links { display: none; }
+    .page-hero { grid-template-columns: 1fr; gap: 2rem; padding: 8rem 2rem 3rem; }
+    .contact-wrap { padding: 3rem 2rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .mini-faq { padding: 3rem 2rem; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .footer-right { text-align: center; }
+  }
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav>
+  <a href="br-advocacia.html" class="nav-logo"><img src="LOGOTIPO _ VARIACAO_ VERDE.png" alt="BR Advocacia" class="nav-logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="br-advocacia.html">Início</a></li>
+    <li><a href="assessoria-juridica.html">Assessoria</a></li>
+    <li><a href="areas-de-atuacao.html">Áreas de Atuação</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contato.html" class="active">Contato</a></li>
+  </ul>
+  <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." class="nav-cta" target="_blank" rel="noopener">Falar no WhatsApp</a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div>
+    <div class="eyebrow">Entre em Contato</div>
+    <h1>Fale com a <em>BR Advocacia</em></h1>
+    <p>Explique sua situação em poucas linhas. Analisamos o seu caso e retornamos com as orientações iniciais — sem compromisso.</p>
+    <div class="hero-buttons">
+      <a href="https://wa.me/5513991358613?text=Olá%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jurídico%20do%20meu%20negócio%20digital." class="btn-primary" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/></svg>
+        WhatsApp — mais rápido
+      </a>
+      <a href="#formulario" class="btn-secondary">Preencher formulário →</a>
+    </div>
+  </div>
+
+  <!-- CONTACT CHANNELS -->
+  <div class="hero-right">
+    <a href="https://wa.me/5513991358613?text=Olá%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jurídico%20do%20meu%20negócio%20digital." class="contact-channel" target="_blank">
+      <div class="cc-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/></svg>
+      </div>
+      <div class="cc-body">
+        <div class="cc-label">Canal preferencial</div>
+        <div class="cc-title">WhatsApp</div>
+        <div class="cc-sub">Resposta mais rápida · +55 13 99135-8613</div>
+      </div>
+      <span class="cc-arrow">→</span>
+    </a>
+
+    <a href="mailto:anabeatrizrossetoadv@gmail.com" class="contact-channel">
+      <div class="cc-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </div>
+      <div class="cc-body">
+        <div class="cc-label">E-mail</div>
+        <div class="cc-title">anabeatrizrossetoadv@gmail.com</div>
+        <div class="cc-sub">Para documentos e situações mais detalhadas</div>
+      </div>
+      <span class="cc-arrow">→</span>
+    </a>
+
+    <div class="contact-channel" style="cursor:default;">
+      <div class="cc-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      </div>
+      <div class="cc-body">
+        <div class="cc-label">Sede</div>
+        <div class="cc-title">Santos, São Paulo</div>
+        <div class="cc-sub">Atendimento 100% online · Todo o Brasil</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="contact-wrap" id="formulario">
+
+  <!-- FORM -->
+  <div class="form-section appear">
+    <h2>Envie sua <em>situação para análise</em></h2>
+    <p>Preencha os campos abaixo. Quanto mais detalhada for sua descrição, mais objetiva será nossa orientação inicial.</p>
+
+    <div class="form-success" id="formSuccess">
+      <h3>Mensagem recebida!</h3>
+      <p>Vamos analisar sua situação e retornaremos em horário comercial, de acordo com a complexidade do caso.<br>Se preferir uma resposta mais rápida, entre em contato pelo <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." style="color:var(--gold);" target="_blank">WhatsApp</a>.</p>
+    </div>
+
+    <div class="form-error-msg" id="formError">
+      Ocorreu um problema ao enviar sua mensagem. Por favor, tente novamente em alguns minutos ou entre em contato pelo <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." style="color:var(--gold);" target="_blank">WhatsApp</a>.
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="nome">Nome <span>*</span></label>
+          <input class="form-input" type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+          <span class="error-msg" id="nomeError"></span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="whatsapp">WhatsApp <span>*</span></label>
+          <input class="form-input" type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
+          <span class="error-msg" id="whatsappError"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">E-mail <span>*</span></label>
+        <input class="form-input" type="email" id="email" name="email" placeholder="seu@email.com" required>
+        <span class="error-msg" id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="perfil">Qual é o seu perfil? <span>*</span></label>
+        <select class="form-select form-input" id="perfil" name="perfil" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="agencia">Agência de Marketing / Publicidade / Influência</option>
+          <option value="criador">Criador de Conteúdo / Influenciador</option>
+          <option value="marca">Marca que trabalha com influenciadores</option>
+          <option value="prestador">Prestador de serviço no digital</option>
+          <option value="outro">Outro</option>
+        </select>
+        <span class="error-msg" id="perfilError"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="necessidade">Principal necessidade <span>*</span></label>
+        <select class="form-select form-input" id="necessidade" name="necessidade" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="assessoria">Assessoria jurídica contínua</option>
+          <option value="contrato">Elaboração / revisão de contrato</option>
+          <option value="marca">Registro ou proteção de marca</option>
+          <option value="pirataria">Remoção de conteúdo pirateado</option>
+          <option value="imagem">Uso indevido de nome / imagem</option>
+          <option value="inadimplencia">Inadimplência / recuperação de crédito</option>
+          <option value="conta">Recuperação de conta em plataforma</option>
+          <option value="lancamento">Estruturação jurídica de lançamento</option>
+          <option value="outro">Outro</option>
+        </select>
+        <span class="error-msg" id="necessidadeError"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="descricao">Descreva sua situação <span>*</span></label>
+        <textarea class="form-textarea form-input" id="descricao" name="descricao"
+          placeholder="Conte em poucas linhas o que está acontecendo ou o que você precisa. Quanto mais detalhes, melhor." required></textarea>
+        <span class="error-msg" id="descricaoError"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-check">
+          <input type="checkbox" id="lgpd" name="lgpd" required>
+          <span class="form-check-label">
+            Li e concordo com a <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> da BR Advocacia. Autorizo o uso dos dados informados para retorno de contato e análise da minha demanda.
+          </span>
+        </label>
+        <span class="error-msg" id="lgpdError"></span>
+      </div>
+
+      <button type="submit" class="form-submit" id="submitBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+        Enviar para análise
+      </button>
+    </form>
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="contact-sidebar appear">
+
+    <div class="sidebar-block">
+      <span class="sb-label">Horário de atendimento</span>
+      <div class="sb-hours">
+        <div class="sb-hour-row">
+          <span class="day">Segunda a sexta</span>
+          <span class="time">9h – 18h</span>
+        </div>
+        <div class="sb-hour-row">
+          <span class="day">Sábado</span>
+          <span class="time">Sob agendamento</span>
+        </div>
+        <div class="sb-hour-row">
+          <span class="day">Domingo</span>
+          <span class="time">Fechado</span>
+        </div>
+      </div>
+      <p style="margin-top:1rem;font-size:.8rem;color:rgba(230,217,200,.5);">Urgências podem ser encaminhadas via WhatsApp — retornamos assim que possível.</p>
+    </div>
+
+    <div class="sidebar-block">
+      <span class="sb-label">O que acontece após o contato</span>
+      <ul class="sb-promise-list">
+        <li>Lemos sua mensagem com atenção</li>
+        <li>Analisamos o contexto jurídico do seu caso</li>
+        <li>Retornamos com orientações iniciais claras</li>
+        <li>Se houver compatibilidade, apresentamos proposta</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-block">
+      <span class="sb-label">Por que a BR Advocacia</span>
+      <ul class="sb-promise-list">
+        <li>Especialização em agências, influência e marketing</li>
+        <li>Linguagem clara, sem juridiquês</li>
+        <li>Atendimento online para todo o Brasil</li>
+        <li>Beatriz Rosseto · OAB/SP 498.119</li>
+      </ul>
+    </div>
+
+  </aside>
+</div>
+
+<!-- MINI FAQ -->
+<div class="mini-faq appear">
+  <h2>Dúvidas antes de <em>entrar em contato</em></h2>
+  <div class="mfaq-grid">
+    <div class="mfaq-item">
+      <h4>O primeiro contato tem algum custo?</h4>
+      <p>Não. O retorno inicial após o envio do formulário ou WhatsApp é sem custo. A proposta de honorários, quando houver, é apresentada de forma transparente antes de qualquer compromisso.</p>
+    </div>
+    <div class="mfaq-item">
+      <h4>Preciso estar em Santos/SP para ser atendido?</h4>
+      <p>Não. O atendimento é 100% online, com validade jurídica em todo o Brasil. Reuniões, assinaturas e envio de documentos são feitos de forma digital.</p>
+    </div>
+    <div class="mfaq-item">
+      <h4>Preciso ter uma empresa aberta para contratar?</h4>
+      <p>Não necessariamente. Atendemos tanto pessoas físicas quanto jurídicas que atuam no mercado digital — o importante é entender sua situação e o que precisa ser protegido.</p>
+    </div>
+  </div>
+
+  <p style="margin-top:1.75rem;font-size:.875rem;color:rgba(230,217,200,.55);">
+    Mais dúvidas? Acesse nossa <a href="faq.html" style="color:var(--gold);text-decoration:none;">página de FAQ completa →</a>
+  </p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><img src="simbolo-BRANCO.png" alt="BR Advocacia" class="footer-logo-img"></div>
+  <div class="footer-mid">
+    Beatriz Rosseto · OAB/SP 498.119<br>
+    Santos, São Paulo · Atendimento online para todo o Brasil
+  </div>
+  <div class="footer-right">
+    <div style="display:flex;gap:1.5rem;justify-content:flex-end;flex-wrap:wrap;margin-bottom:.75rem;">
+      <a href="br-advocacia.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Início</a>
+      <a href="assessoria-juridica.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Assessoria</a>
+      <a href="areas-de-atuacao.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Áreas</a>
+      <a href="sobre.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Sobre</a>
+      <a href="faq.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">FAQ</a>
+      <a href="contato.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Contato</a>
+    </div>
+    <a href="politica-de-privacidade.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;display:block;text-align:right;margin-bottom:.4rem;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Política de Privacidade</a>
+    <span style="font-size:.75rem;color:var(--text-muted);">© 2025 BR Advocacia · Todos os direitos reservados</span>
+  </div>
+</footer>
+
+<script>
+  // Appear on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.appear').forEach(el => observer.observe(el));
+
+  // Form validation + submission
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+
+  function validateField(id, errorId, condition, message) {
+    const el = document.getElementById(id);
+    const err = document.getElementById(errorId);
+    if (!condition(el.value)) {
+      el.classList.add('input-error');
+      err.textContent = message;
+      return false;
+    }
+    el.classList.remove('input-error');
+    err.textContent = '';
+    return true;
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const lgpd = document.getElementById('lgpd');
+    const lgpdErr = document.getElementById('lgpdError');
+
+    const validations = [
+      validateField('nome', 'nomeError', v => v.trim().length >= 3, 'Por favor, informe seu nome completo.'),
+      validateField('whatsapp', 'whatsappError', v => v.replace(/\D/g,'').length >= 10, 'Informe um WhatsApp válido com DDD.'),
+      validateField('email', 'emailError', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), 'Informe um e-mail válido.'),
+      validateField('perfil', 'perfilError', v => v !== '', 'Selecione seu perfil.'),
+      validateField('necessidade', 'necessidadeError', v => v !== '', 'Selecione sua principal necessidade.'),
+      validateField('descricao', 'descricaoError', v => v.trim().length >= 20, 'Descreva sua situação em pelo menos 20 caracteres.'),
+    ];
+
+    if (!lgpd.checked) {
+      lgpdErr.textContent = 'Você precisa aceitar a Política de Privacidade para continuar.';
+      validations.push(false);
+    } else {
+      lgpdErr.textContent = '';
+    }
+
+    if (validations.includes(false)) return;
+
+    // Submit
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando…';
+
+    fetch('https://formspree.io/f/xjgqgbel', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(r => {
+      if (r.ok) {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('formSuccess').classList.add('visible');
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg> Enviar para análise';
+        document.getElementById('formError').style.display = 'block';
+      }
+    })
+    .catch(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg> Enviar para análise';
+      document.getElementById('formError').style.display = 'block';
+    });
+  });
+</script>
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." target="_blank" rel="noopener" id="wa-float"
+   aria-label="Falar no WhatsApp"
+   style="position:fixed;bottom:1.75rem;right:1.75rem;z-index:999;
+          width:3.5rem;height:3.5rem;border-radius:50%;background:#25D366;
+          display:flex;align-items:center;justify-content:center;
+          box-shadow:0 4px 20px rgba(37,211,102,.45);transition:transform .3s,box-shadow .3s;
+          text-decoration:none;">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/>
+  </svg>
+</a>
+<style>
+#wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,.6); }
+@media(max-width:600px){ #wa-float{ bottom:1rem;right:1rem; } }
+</style>
+</body>
+</html>

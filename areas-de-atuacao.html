@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Áreas de Atuação em Direito para Negócios Digitais | BR Advocacia</title>
+<meta name="description" content="Contratos, proteção de marca, remoção de conteúdo, inadimplência, direito de imagem, recuperação de conta e processos ligados ao mercado digital.">
+<meta property="og:title" content="Áreas de Atuação – BR Advocacia">
+<meta property="og:description" content="Contratos, proteção de marca, remoção de conteúdo, inadimplência, direito de imagem, recuperação de conta e processos ligados ao mercado digital.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bradvocacia.com.br/areas-de-atuacao">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #E6D9C8;
+    --dark: #1C1F18;
+    --verde: #4F5742;
+    --marrom: #533C2A;
+    --gold: #92652F;
+    --gold-light: #B07A3E;
+    --mid: #252820;
+    --text-muted: #8A7A68;
+    --border: rgba(146,101,47,0.25);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--dark);
+    color: var(--cream);
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 9999; opacity: .35;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(28,31,24,.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo { display: flex; align-items: center; text-decoration: none; }
+  .nav-logo-img { height: 104px; width: auto; filter: invert(1) brightness(1.05); transition: opacity .3s; }
+  .nav-logo-img:hover { opacity: .75; }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: .8rem; letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+    transition: color .3s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--cream); }
+
+  .nav-cta {
+    font-size: .75rem; letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .65rem 1.5rem;
+    border: 1px solid var(--gold);
+    color: var(--gold); text-decoration: none;
+    transition: all .3s;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 10rem 4rem 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    display: flex; align-items: center; gap: .75rem;
+    font-size: .7rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1.75rem;
+    opacity: 0; animation: fadeUp .8s .2s forwards;
+  }
+  .eyebrow::before {
+    content: ''; display: block;
+    width: 2.5rem; height: 1px; background: var(--gold);
+  }
+
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5vw, 4.4rem);
+    font-weight: 300; line-height: 1.1;
+    max-width: 52rem; margin-bottom: 1.75rem;
+    opacity: 0; animation: fadeUp .8s .35s forwards;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--gold); }
+
+  .page-hero p {
+    font-size: 1rem; color: rgba(230,217,200,.65);
+    max-width: 44rem; line-height: 1.85;
+    opacity: 0; animation: fadeUp .8s .5s forwards;
+  }
+
+  /* ── AREA NAV PILLS ── */
+  .area-nav {
+    max-width: 1400px; margin: 0 auto;
+    padding: 2.5rem 4rem;
+    display: flex; flex-wrap: wrap; gap: .6rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .area-pill {
+    font-size: .7rem; letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .55rem 1.1rem;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all .3s;
+    white-space: nowrap;
+  }
+  .area-pill:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ── SHARED LAYOUT ── */
+  .area-block {
+    max-width: 1400px; margin: 0 auto;
+    padding: 5.5rem 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .area-block.bg-mid {
+    max-width: none;
+    background: var(--mid);
+  }
+  .area-block.bg-mid .inner {
+    max-width: 1400px; margin: 0 auto;
+    padding: 0 4rem;
+  }
+
+  .section-label {
+    display: flex; align-items: center; gap: .75rem;
+    font-size: .65rem; letter-spacing: .2em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+  .section-label::before {
+    content: ''; display: block;
+    width: 2rem; height: 1px; background: var(--gold);
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 300; line-height: 1.2;
+    margin-bottom: 1.25rem;
+  }
+  h2 em { font-style: italic; color: var(--gold); }
+
+  .intro-text {
+    font-size: .95rem; color: rgba(230,217,200,.65);
+    max-width: 44rem; line-height: 1.85;
+    margin-bottom: 2.75rem;
+  }
+
+  .objetivo {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--border);
+    background: rgba(146,101,47,.04);
+    margin-top: 2.5rem;
+    font-size: .875rem; color: rgba(230,217,200,.7);
+    line-height: 1.7;
+  }
+  .objetivo-label {
+    font-size: .65rem; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--gold);
+    white-space: nowrap; margin-top: .15rem;
+    flex-shrink: 0;
+  }
+
+  .obs-box {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 2px solid rgba(146,101,47,.4);
+    background: rgba(28,31,24,.5);
+    font-size: .85rem; color: rgba(230,217,200,.55);
+    line-height: 1.75;
+  }
+  .obs-box strong { color: var(--gold); font-weight: 400; }
+
+  /* ── TWO-COL GRID ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+  /* ── HOW WE ACT BLOCKS ── */
+  .act-group { margin-bottom: 2rem; }
+  .act-group:last-child { margin-bottom: 0; }
+
+  .act-group-title {
+    font-size: .7rem; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: .85rem;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .act-list { list-style: none; display: flex; flex-direction: column; gap: .45rem; }
+  .act-list li {
+    font-size: .875rem; color: rgba(230,217,200,.7);
+    display: flex; gap: .75rem; align-items: flex-start;
+    line-height: 1.6;
+  }
+  .act-list li::before {
+    content: '→'; color: var(--gold);
+    font-size: .7rem; flex-shrink: 0; margin-top: .2rem;
+  }
+
+  /* ── VISUAL CARD GRID ── */
+  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 2rem; }
+
+  .info-card {
+    background: var(--dark);
+    padding: 2rem;
+    transition: background .3s;
+  }
+  .info-card:hover { background: #111110; }
+
+  .info-card .ic-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem; font-weight: 300;
+    color: rgba(146,101,47,.18); line-height: 1;
+    margin-bottom: .75rem;
+  }
+  .info-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400;
+    color: var(--gold-light); margin-bottom: .6rem;
+  }
+  .info-card p {
+    font-size: .85rem; color: rgba(230,217,200,.6); line-height: 1.75;
+    margin: 0;
+  }
+
+  /* ── HIGHLIGHT QUOTE ── */
+  .highlight-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem; font-style: italic;
+    color: rgba(230,217,200,.75); line-height: 1.65;
+    padding: 2rem 2.5rem;
+    border-left: 2px solid var(--gold);
+    background: rgba(146,101,47,.04);
+  }
+
+  /* ── ASSESSORIA BLOCK ── */
+  .assessoria-pilares {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; margin-top: 2rem;
+  }
+  .pilar {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    transition: border-color .3s;
+  }
+  .pilar:hover { border-color: rgba(146,101,47,.5); }
+  .pilar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 300;
+    color: var(--gold); opacity: .3; line-height: 1;
+    flex-shrink: 0;
+  }
+  .pilar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-weight: 400;
+    color: var(--gold-light); margin-bottom: .4rem;
+  }
+  .pilar p { font-size: .85rem; color: rgba(230,217,200,.6); line-height: 1.7; margin: 0; }
+
+  /* ── OVERVIEW GRID (top) ── */
+  .overview-strip {
+    max-width: 1400px; margin: 0 auto;
+    padding: 0 4rem;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border);
+    margin-top: 3rem;
+  }
+  .ov-item {
+    background: var(--dark);
+    padding: 1.75rem;
+    display: flex; flex-direction: column; gap: .6rem;
+    transition: background .3s; cursor: default;
+  }
+  .ov-item:hover { background: var(--mid); }
+  .ov-icon { font-size: 1.3rem; }
+  .ov-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; font-weight: 400; color: var(--cream);
+    line-height: 1.3;
+  }
+
+  /* ── BUTTONS ── */
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--gold); color: var(--dark);
+    padding: 1rem 2rem;
+    font-size: .8rem; font-weight: 500;
+    letter-spacing: .1em; text-transform: uppercase;
+    text-decoration: none; transition: all .3s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    border: 1px solid rgba(230,217,200,.25);
+    color: var(--cream);
+    padding: 1rem 2rem;
+    font-size: .8rem; letter-spacing: .1em;
+    text-transform: uppercase; text-decoration: none;
+    transition: all .3s;
+  }
+  .btn-secondary:hover { border-color: var(--cream); transform: translateY(-2px); }
+
+  .btn-gold-outline {
+    display: inline-flex; align-items: center; gap: .6rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: .9rem 2rem;
+    font-size: .8rem; letter-spacing: .1em;
+    text-transform: uppercase; text-decoration: none;
+    transition: all .3s;
+  }
+  .btn-gold-outline:hover { background: var(--gold); color: var(--dark); }
+
+  /* ── CTA FINAL ── */
+  .cta-final {
+    padding: 7rem 4rem; text-align: center;
+    position: relative; overflow: hidden;
+    border-top: 1px solid var(--border);
+  }
+  .cta-final::before {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(146,101,47,.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-final h2 { max-width: 44rem; margin: 0 auto 1.5rem; font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
+  .cta-final > p { max-width: 38rem; margin: 0 auto 3rem; font-size: .95rem; color: rgba(230,217,200,.65); line-height: 1.85; }
+  .cta-buttons { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #090906;
+    border-top: 1px solid var(--border);
+    padding: 3rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--cream); }
+  .footer-logo span { color: var(--gold); }
+  .footer-logo-img { height: 96px; width: auto; opacity: .9; }
+  .footer-mid { font-size: .75rem; color: var(--text-muted); text-align: center; line-height: 1.6; }
+  .footer-right { font-size: .75rem; color: var(--text-muted); text-align: right; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .appear { opacity: 0; transform: translateY(28px); transition: opacity .7s, transform .7s; }
+  .appear.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    nav { padding: 1.2rem 2rem; }
+    .nav-links { display: none; }
+    .area-nav { padding: 1.5rem 2rem; }
+    .area-block { padding: 4rem 2rem; }
+    .area-block.bg-mid .inner { padding: 0 2rem; }
+    .two-col, .three-col, .card-grid,
+    .assessoria-pilares, .overview-strip { grid-template-columns: 1fr; gap: 1.5rem; }
+    .overview-strip { padding: 0; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .footer-right { text-align: center; }
+    .cta-final { padding: 5rem 2rem; }
+    .page-hero { padding: 8rem 2rem 3rem; }
+  }
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav>
+  <a href="br-advocacia.html" class="nav-logo"><img src="LOGOTIPO _ VARIACAO_ VERDE.png" alt="BR Advocacia" class="nav-logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="br-advocacia.html">Início</a></li>
+    <li><a href="assessoria-juridica.html">Assessoria</a></li>
+    <li><a href="areas-de-atuacao.html" class="active">Áreas de Atuação</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+  <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." class="nav-cta" target="_blank" rel="noopener">Falar no WhatsApp</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="eyebrow">Áreas de Atuação</div>
+  <h1>Direito aplicado a <em>negócios digitais</em></h1>
+  <p>Protegemos juridicamente tudo o que sustenta o seu negócio na internet: marca, contratos, imagem, conteúdos, receita e relacionamento com clientes e parceiros.</p>
+</div>
+
+<!-- OVERVIEW PILLS NAV -->
+<div class="area-nav">
+  <a href="#contratos" class="area-pill">Contratos</a>
+  <a href="#marca" class="area-pill">Proteção de Marca</a>
+  <a href="#remocao" class="area-pill">Remoção e Pirataria</a>
+  <a href="#contas" class="area-pill">Recuperação de Contas</a>
+  <a href="#inadimplencia" class="area-pill">Inadimplência</a>
+  <a href="#imagem" class="area-pill">Imagem e Publicidade</a>
+  <a href="#lancamentos" class="area-pill">Lançamentos</a>
+  <a href="#judicial" class="area-pill">Processos Judiciais</a>
+  <a href="#assessoria" class="area-pill">Assessoria Contínua</a>
+</div>
+
+<!-- OVERVIEW STRIP -->
+<div style="max-width:1400px;margin:0 auto;padding:3rem 4rem 0;" class="appear">
+  <div class="overview-strip" style="margin-top:0;">
+    <div class="ov-item"><div class="ov-icon">📄</div><div class="ov-label">Contratos para agências, criadores, mentores e marcas</div></div>
+    <div class="ov-item"><div class="ov-icon">™️</div><div class="ov-label">Proteção de marca e identidade</div></div>
+    <div class="ov-item"><div class="ov-icon">🛡️</div><div class="ov-label">Remoção de conteúdo e pirataria</div></div>
+    <div class="ov-item"><div class="ov-icon">🔓</div><div class="ov-label">Recuperação de contas e plataformas</div></div>
+    <div class="ov-item"><div class="ov-icon">💰</div><div class="ov-label">Inadimplência e recuperação de crédito</div></div>
+    <div class="ov-item"><div class="ov-icon">📸</div><div class="ov-label">Imagem e contratos de publicidade</div></div>
+    <div class="ov-item"><div class="ov-icon">🚀</div><div class="ov-label">Lançamentos e infoprodutos</div></div>
+    <div class="ov-item"><div class="ov-icon">⚖️</div><div class="ov-label">Processos judiciais no digital</div></div>
+  </div>
+</div>
+
+<!-- 1. CONTRATOS -->
+<div class="area-block" id="contratos">
+  <div class="section-label appear">01 · Contratos</div>
+  <div class="two-col">
+    <div class="appear">
+      <h2>Contratos para <em>agências, criadores, mentores e marcas</em></h2>
+      <p class="intro-text">No digital, quase tudo passa por contrato: mentorias, cursos, coproduções, agências, gestão de tráfego, afiliação, campanhas de publicidade, contratos com marcas, constituição de sociedade e parcerias estratégicas. Um contrato mal feito pode gerar conflitos, inadimplência, bloqueios de acesso, prejuízos e desgaste de reputação.</p>
+
+      <div class="highlight-quote appear">
+        Contratos bem feitos são a base de relações comerciais saudáveis — e a principal ferramenta para evitar conflitos antes que eles aconteçam.
+      </div>
+    </div>
+
+    <div class="appear">
+      <div class="act-group">
+        <div class="act-group-title">Elaboração e revisão de contratos</div>
+        <ul class="act-list">
+          <li>Mentoria, cursos, programas e comunidades</li>
+          <li>Coprodução e lançamentos</li>
+          <li>Agências de marketing, tráfego e social media</li>
+          <li>Publicidade e influência (publis com marcas)</li>
+          <li>Colaboradores e prestadores de serviço</li>
+          <li>Licenciamento de marca e uso de imagem</li>
+          <li>Afiliados e parcerias estratégicas</li>
+        </ul>
+      </div>
+
+      <div class="act-group">
+        <div class="act-group-title">Adequação de cláusulas</div>
+        <ul class="act-list">
+          <li>Prazo, pagamento, entrega e responsabilidades</li>
+          <li>O que será entregue, por qual meio e em qual prazo</li>
+          <li>Divisão de lucros e obrigações de cada parte</li>
+          <li>Uso de imagem e marca</li>
+          <li>Confidencialidade e não concorrência</li>
+          <li>Tratamento de dados e adequação à LGPD</li>
+          <li>Rescisão e penalidades</li>
+        </ul>
+      </div>
+
+      <div class="objetivo">
+        <span class="objetivo-label">Objetivo</span>
+        <span>Dar segurança jurídica às relações comerciais do seu negócio, reduzindo riscos de conflitos, questionamentos e calotes.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. MARCA -->
+<div class="area-block bg-mid" id="marca">
+  <div class="inner">
+    <div class="section-label appear">02 · Proteção de Marca</div>
+    <div class="two-col">
+      <div class="appear">
+        <h2>Proteção de marca para a sua <em>empresa ou marca pessoal</em></h2>
+        <p class="intro-text">Sua marca é um dos maiores patrimônios do seu negócio. No ambiente online, confusão de nomes e imitações são comuns — e podem confundir seu público e prejudicar seu posicionamento.</p>
+
+        <div class="card-grid" style="margin-top:0;">
+          <div class="info-card">
+            <div class="ic-num">01</div>
+            <h3>Orientação estratégica</h3>
+            <p>Orientação sobre proteção da marca no ambiente digital antes de qualquer decisão.</p>
+          </div>
+          <div class="info-card">
+            <div class="ic-num">02</div>
+            <h3>Registro de marca</h3>
+            <p>Atuação em registro de marca quando fizer parte da necessidade do cliente.</p>
+          </div>
+          <div class="info-card">
+            <div class="ic-num">03</div>
+            <h3>Análise de riscos</h3>
+            <p>Identificação de riscos de choque com outras marcas antes de lançar ou registrar.</p>
+          </div>
+          <div class="info-card">
+            <div class="ic-num">04</div>
+            <h3>Uso indevido</h3>
+            <p>Atuação em casos de uso indevido de nome, marca ou identidade visual por terceiros.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="appear">
+        <div class="highlight-quote" style="margin-bottom:2rem;">
+          Marca registrada é o que garante que o seu nome, método ou identidade não podem ser usados por mais ninguém — e que você tem respaldo jurídico para agir quando isso acontecer.
+        </div>
+
+        <div class="objetivo">
+          <span class="objetivo-label">Objetivo</span>
+          <span>Garantir que a marca pela qual você é reconhecido seja juridicamente protegida e usada de forma exclusiva dentro dos limites legais.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. REMOÇÃO -->
+<div class="area-block" id="remocao">
+  <div class="section-label appear">03 · Remoção e Pirataria</div>
+  <div class="two-col">
+    <div class="appear">
+      <h2>Remoção de conteúdo pirateado, indevido e <em>ofensivo</em></h2>
+      <p class="intro-text">Quem atua no digital está exposto: conteúdos pirateados, cópia de aulas, uso indevido de vídeos, exposições, ataques, difamação. Esse tipo de situação pode afetar sua reputação, faturamento e até sua saúde emocional.</p>
+
+      <div class="objetivo">
+        <span class="objetivo-label">Objetivo</span>
+        <span>Retirar do ar conteúdos que violam seus direitos e atuar para proteger sua reputação no ambiente digital.</span>
+      </div>
+    </div>
+
+    <div class="appear">
+      <div class="act-group">
+        <div class="act-group-title">Conteúdo pirateado</div>
+        <ul class="act-list">
+          <li>Cursos, mentorias e materiais exclusivos</li>
+          <li>PDFs, e-books, vídeos de área de membros</li>
+          <li>Conteúdos replicados sem autorização</li>
+        </ul>
+      </div>
+
+      <div class="act-group">
+        <div class="act-group-title">Uso indevido de imagem</div>
+        <ul class="act-list">
+          <li>Fotos, vídeos, trechos de aulas, stories, lives</li>
+        </ul>
+      </div>
+
+      <div class="act-group">
+        <div class="act-group-title">Difamação, exposição e ataques à reputação</div>
+        <ul class="act-list">
+          <li>Conteúdos ofensivos publicados online</li>
+          <li>Acusações sem prova em redes ou comunidades</li>
+          <li>Publicações que extrapolem a crítica legítima</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. CONTAS -->
+<div class="area-block bg-mid" id="contas">
+  <div class="inner">
+    <div class="section-label appear">04 · Recuperação de Contas</div>
+    <div class="two-col">
+      <div class="appear">
+        <h2>Recuperação de conta e atuação em conflitos com <em>plataformas</em></h2>
+        <p class="intro-text">Contas bloqueadas, perda de acesso por invasão, exclusão de perfis ou canais podem paralisar um negócio inteiro. Quando há fundamento jurídico, é possível adotar medidas para reverter a situação.</p>
+
+        <div class="obs-box">
+          <strong>Observação importante:</strong> Cada caso é analisado individualmente. Não é possível garantir a recuperação de qualquer conta, pois decisões também dependem das plataformas e, em alguns casos, do Judiciário.
+        </div>
+      </div>
+
+      <div class="appear">
+        <div class="act-group">
+          <div class="act-group-title">Casos em que atuamos</div>
+          <ul class="act-list">
+            <li>Bloqueio de contas em redes sociais</li>
+            <li>Perda de acesso por invasão ou hack</li>
+            <li>Remoção de canais ou desmonetização (quando houver base jurídica)</li>
+          </ul>
+        </div>
+
+        <div class="act-group">
+          <div class="act-group-title">Como atuamos</div>
+          <ul class="act-list">
+            <li>Análise jurídica do caso concreto</li>
+            <li>Medidas extrajudiciais junto às plataformas</li>
+            <li>Ações judiciais quando cabível e viável</li>
+          </ul>
+        </div>
+
+        <div class="objetivo">
+          <span class="objetivo-label">Objetivo</span>
+          <span>Explorar todas as vias jurídicas disponíveis para reverter situações que comprometem a operação do seu negócio.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. INADIMPLÊNCIA -->
+<div class="area-block" id="inadimplencia">
+  <div class="section-label appear">05 · Inadimplência</div>
+  <div class="two-col">
+    <div class="appear">
+      <h2>Inadimplência de alunos e clientes e <em>recuperação de crédito</em></h2>
+      <p class="intro-text">No digital, é comum lidar com inadimplência de alunos e clientes que compram cursos, mentorias ou serviços e deixam de pagar. Sem uma estrutura jurídica adequada, a cobrança pode ser ineficaz ou até gerar problemas para o seu negócio.</p>
+
+      <div class="highlight-quote appear">
+        Já atuamos em casos reais de recuperação de crédito de mentores e infoprodutores — inclusive em situações mais complexas com valores relevantes.
+      </div>
+    </div>
+
+    <div class="appear">
+      <div class="act-group">
+        <div class="act-group-title">Estruturação preventiva</div>
+        <ul class="act-list">
+          <li>Contratos e termos de uso bem elaborados</li>
+          <li>Condições de cancelamento e reembolso claras</li>
+          <li>Orientação sobre política de cobrança</li>
+        </ul>
+      </div>
+
+      <div class="act-group">
+        <div class="act-group-title">Atuação em inadimplência já ocorrida</div>
+        <ul class="act-list">
+          <li>Notificações extrajudiciais a inadimplentes</li>
+          <li>Ações judiciais de cobrança e recuperação de crédito, quando houver viabilidade</li>
+        </ul>
+      </div>
+
+      <div class="objetivo">
+        <span class="objetivo-label">Objetivo</span>
+        <span>Ajudar a diminuir a inadimplência e recuperar valores devidos, respeitando a legislação e a imagem do seu negócio.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. IMAGEM E PUBLICIDADE -->
+<div class="area-block bg-mid" id="imagem">
+  <div class="inner">
+    <div class="section-label appear">06 · Imagem e Publicidade</div>
+    <div class="two-col">
+      <div class="appear">
+        <h2>Direito de imagem e contratos de publicidade para influenciadores e <em>marcas</em></h2>
+        <p class="intro-text">Quem aparece publicamente no digital — seja como criador ou como marca — precisa de cuidado com o uso de imagem e com os contratos de publicidade. Sem contratos claros, abusos e conflitos são frequentes.</p>
+
+        <div class="objetivo">
+          <span class="objetivo-label">Objetivo</span>
+          <span>Garantir que seu nome, imagem e conteúdos sejam usados dentro de limites claros e justos, evitando abusos e conflitos com marcas e parceiros.</span>
+        </div>
+      </div>
+
+      <div class="appear">
+        <div class="act-group">
+          <div class="act-group-title">Contratos de publicidade e influência</div>
+          <ul class="act-list">
+            <li>Entregas, prazos, formatos e direitos de uso do conteúdo</li>
+            <li>Regras de uso de imagem e voz</li>
+            <li>Condições de renovação e exclusividade</li>
+          </ul>
+        </div>
+
+        <div class="act-group">
+          <div class="act-group-title">Proteção da sua imagem</div>
+          <ul class="act-list">
+            <li>Limites de uso da sua imagem por marcas e parceiros</li>
+            <li>Atuação em casos de uso indevido de imagem e conteúdo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 7. LANÇAMENTOS -->
+<div class="area-block" id="lancamentos">
+  <div class="section-label appear">07 · Lançamentos e Infoprodutos</div>
+  <div class="two-col">
+    <div class="appear">
+      <h2>Estruturação jurídica de lançamentos, perpétuo e <em>infoprodutos</em></h2>
+      <p class="intro-text">Lançamentos e vendas recorrentes envolvem promessas, garantias, bônus, políticas de reembolso e campanhas intensas de marketing. Tudo isso precisa ser visto também do ponto de vista jurídico.</p>
+
+      <div class="highlight-quote appear">
+        Entendemos a rotina de lançamentos — semente, interno, perpétuo, assinatura — e atuamos para que sua copy e sua oferta sejam também juridicamente sólidas.
+      </div>
+    </div>
+
+    <div class="appear">
+      <div class="act-group">
+        <div class="act-group-title">Análise jurídica da oferta</div>
+        <ul class="act-list">
+          <li>Promessas e garantias usadas na copy</li>
+          <li>Políticas de reembolso, cancelamento e suporte</li>
+          <li>Termos de uso e contratos de adesão</li>
+        </ul>
+      </div>
+
+      <div class="act-group">
+        <div class="act-group-title">Orientação preventiva</div>
+        <ul class="act-list">
+          <li>Evitar promessas abusivas ou enganosas</li>
+          <li>Reduzir riscos de ações judiciais e reclamações em massa</li>
+          <li>Adequar o jurídico ao modelo de oferta (lançamento, perpétuo, assinatura etc.)</li>
+        </ul>
+      </div>
+
+      <div class="objetivo">
+        <span class="objetivo-label">Objetivo</span>
+        <span>Blindar juridicamente seus lançamentos e produtos digitais para que você possa crescer com mais segurança.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8. JUDICIAL -->
+<div class="area-block bg-mid" id="judicial">
+  <div class="inner">
+    <div class="section-label appear">08 · Processos Judiciais</div>
+    <div class="two-col">
+      <div class="appear">
+        <h2>Processos judiciais decorrentes da atuação no <em>mercado digital</em></h2>
+        <p class="intro-text">Quando a via extrajudicial não resolve ou quando o conflito já está instaurado, pode ser necessário ingressar com processo judicial ou apresentar defesa. A BR Advocacia atua em processos relacionados ao ambiente digital.</p>
+
+        <div class="obs-box">
+          <strong>Observação:</strong> A inclusão de processos judiciais pode fazer parte da assessoria jurídica ou ser contratada à parte, conforme a necessidade e o acordo com o cliente.
+        </div>
+      </div>
+
+      <div class="appear">
+        <div class="act-group">
+          <div class="act-group-title">Processos em que atuamos</div>
+          <ul class="act-list">
+            <li>Ações relacionadas à prestação de serviços pela internet</li>
+            <li>Inadimplência, quebra contratual e descumprimento de acordo</li>
+            <li>Uso indevido de marca, imagem e conteúdo</li>
+            <li>Danos morais e materiais ligados à atuação no digital</li>
+            <li>Defesa em ações movidas por clientes, parceiros ou terceiros</li>
+          </ul>
+        </div>
+
+        <div class="objetivo">
+          <span class="objetivo-label">Objetivo</span>
+          <span>Representar o seu negócio com estratégia e conhecimento do mercado online nas vias judiciais, quando necessário.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 9. ASSESSORIA -->
+<div class="area-block" id="assessoria">
+  <div class="section-label appear">09 · Visão de Conjunto</div>
+  <h2 class="appear">Assessoria jurídica contínua para <em>negócios digitais</em></h2>
+  <p class="intro-text appear" style="max-width:44rem;">Todas as áreas acima podem ser trabalhadas de forma pontual ou dentro de uma assessoria jurídica contínua, em que a BR Advocacia atua como o jurídico do seu negócio.</p>
+
+  <div class="assessoria-pilares appear">
+    <div class="pilar">
+      <div class="pilar-num">01</div>
+      <div>
+        <h3>Prevenir problemas</h3>
+        <p>Antes que se tornem crises — na análise de contratos, campanhas, parcerias e lançamentos.</p>
+      </div>
+    </div>
+    <div class="pilar">
+      <div class="pilar-num">02</div>
+      <div>
+        <h3>Acompanhar contratos e parcerias</h3>
+        <p>Em tempo real, com clareza sobre o que está sendo firmado e quais são os riscos.</p>
+      </div>
+    </div>
+    <div class="pilar">
+      <div class="pilar-num">03</div>
+      <div>
+        <h3>Atuar em inadimplência e conflitos</h3>
+        <p>Quando o problema já existe, com estratégia e sem expor desnecessariamente o seu negócio.</p>
+      </div>
+    </div>
+    <div class="pilar">
+      <div class="pilar-num">04</div>
+      <div>
+        <h3>Proteção integrada</h3>
+        <p>Marca, imagem, conteúdos e receita — como um conjunto, não como problemas isolados.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:2.5rem;" class="appear">
+    <a href="assessoria-juridica.html" class="btn-gold-outline">Saiba mais sobre a assessoria jurídica →</a>
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <div class="section-label appear" style="justify-content:center;">Próximo passo</div>
+  <h2 class="appear">Não importa o tamanho do seu perfil. Se o seu negócio é digital, podemos atuar ao seu <em>lado.</em></h2>
+  <p class="appear">Se você é agência, criador de conteúdo, mentor, infoprodutor ou prestador de serviço do digital, a BR Advocacia está pronta para atuar nas frentes jurídicas que o seu negócio precisa.</p>
+  <div class="cta-buttons appear">
+    <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." class="btn-primary" target="_blank">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/></svg>
+      Falar no WhatsApp
+    </a>
+    <a href="#" class="btn-secondary">Enviar minha situação para análise →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><img src="simbolo-BRANCO.png" alt="BR Advocacia" class="footer-logo-img"></div>
+  <div class="footer-mid">
+    Beatriz Rosseto · OAB/SP 498.119<br>
+    Santos, São Paulo · Atendimento online para todo o Brasil
+  </div>
+  <div class="footer-right">
+    <div style="display:flex;gap:1.5rem;justify-content:flex-end;flex-wrap:wrap;margin-bottom:.75rem;">
+      <a href="br-advocacia.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Início</a>
+      <a href="assessoria-juridica.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Assessoria</a>
+      <a href="areas-de-atuacao.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Áreas</a>
+      <a href="sobre.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Sobre</a>
+      <a href="faq.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">FAQ</a>
+      <a href="contato.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Contato</a>
+    </div>
+    <a href="politica-de-privacidade.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;display:block;text-align:right;margin-bottom:.4rem;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Política de Privacidade</a>
+    <span style="font-size:.75rem;color:var(--text-muted);">© 2025 BR Advocacia · Todos os direitos reservados</span>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.appear').forEach(el => observer.observe(el));
+</script>
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." target="_blank" rel="noopener" id="wa-float"
+   aria-label="Falar no WhatsApp"
+   style="position:fixed;bottom:1.75rem;right:1.75rem;z-index:999;
+          width:3.5rem;height:3.5rem;border-radius:50%;background:#25D366;
+          display:flex;align-items:center;justify-content:center;
+          box-shadow:0 4px 20px rgba(37,211,102,.45);transition:transform .3s,box-shadow .3s;
+          text-decoration:none;">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/>
+  </svg>
+</a>
+<style>
+#wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,.6); }
+@media(max-width:600px){ #wa-float{ bottom:1rem;right:1rem; } }
+</style>
+</body>
+</html>

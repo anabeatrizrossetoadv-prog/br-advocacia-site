@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beatriz Rosseto | Advocacia Estratégica no Digital</title>
+<meta name="description" content="Beatriz Rosseto Advocacia: jurídico para agências de marketing, criadores de conteúdo, influenciadores e marketing de influência. Contratos, marca, imagem e proteção completa do negócio.">
+<meta property="og:title" content="Beatriz Rosseto | Advocacia Estratégica no Digital">
+<meta property="og:description" content="Beatriz Rosseto Advocacia: jurídico para agências de marketing, criadores de conteúdo, influenciadores e marketing de influência. Contratos, marca, imagem e proteção completa do negócio.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bradvocacia.com.br/">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #E6D9C8;
+    --dark: #1C1F18;
+    --verde: #4F5742;
+    --marrom: #533C2A;
+    --gold: #92652F;
+    --gold-light: #B07A3E;
+    --mid: #252820;
+    --text-muted: #8A7A68;
+    --border: rgba(146,101,47,0.25);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--dark);
+    color: var(--cream);
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+
+  /* ── NOISE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 9999; opacity: .35;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(28,31,24,.97), transparent);
+    backdrop-filter: blur(4px);
+    transition: transform .4s ease;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .nav-logo-img {
+    height: 104px;
+    width: auto;
+    filter: invert(1) brightness(1.05);
+    transition: opacity .3s;
+  }
+
+  .nav-logo-img:hover { opacity: .75; }
+
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none;
+  }
+
+  .nav-links a {
+    font-size: .8rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color .3s;
+  }
+
+  .nav-links a:hover { color: var(--cream); }
+
+  .nav-cta {
+    font-size: .75rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .65rem 1.5rem;
+    border: 1px solid var(--gold);
+    background: var(--gold);
+    color: var(--dark);
+    text-decoration: none;
+    transition: opacity .3s;
+  }
+
+  .nav-cta:hover { opacity: .85; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8rem 4rem 6rem 4rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    display: flex; align-items: center; gap: .75rem;
+    font-size: .7rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp .8s .2s forwards;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 2.5rem; height: 1px;
+    background: var(--gold);
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.12;
+    letter-spacing: -.01em;
+    margin-bottom: 1.8rem;
+    opacity: 0;
+    animation: fadeUp .8s .4s forwards;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: rgba(230,217,200,.65);
+    max-width: 30rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fadeUp .8s .6s forwards;
+    line-height: 1.8;
+  }
+
+  .hero-buttons {
+    display: flex; flex-wrap: wrap; gap: 1rem;
+    opacity: 0;
+    animation: fadeUp .8s .8s forwards;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 1rem 2rem;
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    border: 1px solid rgba(230,217,200,.25);
+    color: var(--cream);
+    padding: 1rem 2rem;
+    font-size: .8rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s;
+  }
+
+  .btn-secondary:hover { border-color: var(--cream); transform: translateY(-2px); }
+
+  .hero-micro {
+    margin-top: 1.5rem;
+    font-size: .75rem;
+    color: var(--text-muted);
+    letter-spacing: .05em;
+    opacity: 0;
+    animation: fadeUp .8s 1s forwards;
+  }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-right::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to right,
+      var(--dark) 0%,
+      rgba(28,31,24,0.92) 15%,
+      rgba(28,31,24,0.65) 35%,
+      rgba(28,31,24,0.25) 58%,
+      transparent 80%);
+    z-index: 1;
+  }
+
+  .hero-image-placeholder {
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #252820 0%, #2e3028 50%, #1c1f18 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .hero-geometric {
+    position: absolute;
+    width: 300px; height: 400px;
+    border: 1px solid var(--border);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-8deg);
+    opacity: .4;
+  }
+
+  .hero-geometric::before {
+    content: '';
+    position: absolute;
+    width: 240px; height: 320px;
+    border: 1px solid var(--border);
+    top: -20px; left: -20px;
+    transform: rotate(4deg);
+  }
+
+  .hero-label {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 2;
+    text-align: right;
+    opacity: 0;
+    animation: fadeUp .8s 1.2s forwards;
+  }
+
+  .hero-label .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--cream);
+  }
+
+  .hero-label .title-sub {
+    font-size: .7rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: .25rem;
+  }
+
+  /* ── SCROLL INDICATOR ── */
+  .scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 4rem;
+    display: flex; align-items: center; gap: 1rem;
+    font-size: .65rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    z-index: 3;
+    animation: fadeIn 1s 1.5s both;
+  }
+
+  .scroll-line {
+    width: 3rem; height: 1px;
+    background: var(--text-muted);
+    position: relative; overflow: hidden;
+  }
+
+  .scroll-line::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold);
+    animation: slide 2s ease-in-out infinite;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+    margin: 0 4rem;
+  }
+
+  /* ── SECTION LAYOUT ── */
+  section {
+    padding: 6rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: flex; align-items: center; gap: .75rem;
+    font-size: .65rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block; width: 2rem; height: 1px;
+    background: var(--gold);
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 em { font-style: italic; color: var(--gold); }
+
+  /* ── PARA QUEM ── */
+  .para-quem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+
+  .para-quem-text p {
+    color: rgba(230,217,200,.7);
+    margin-bottom: 2rem;
+    font-size: .95rem;
+  }
+
+  .profiles-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+
+  .profiles-list li {
+    display: flex; align-items: center; gap: 1rem;
+    padding: .9rem 1.25rem;
+    border: 1px solid var(--border);
+    font-size: .875rem;
+    color: rgba(230,217,200,.8);
+    transition: all .3s;
+  }
+
+  .profiles-list li:hover {
+    border-color: var(--gold);
+    color: var(--cream);
+    transform: translateX(6px);
+  }
+
+  .profiles-list li::before {
+    content: '—';
+    color: var(--gold);
+    font-size: .7rem;
+  }
+
+  .para-quem-quote {
+    background: var(--mid);
+    border-left: 2px solid var(--gold);
+    padding: 2rem 2.5rem;
+    margin-top: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: rgba(230,217,200,.8);
+    line-height: 1.6;
+  }
+
+  /* ── ASSESSORIA ── */
+  .assessoria-section {
+    background: var(--mid);
+    padding: 6rem 0;
+  }
+
+  .assessoria-section > .inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+
+  .assessoria-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-top: 3rem;
+    align-items: start;
+  }
+
+  .assessoria-items {
+    display: flex; flex-direction: column; gap: 2rem;
+  }
+
+  .assessoria-item {
+    display: flex; gap: 1.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .assessoria-item:last-child { border-bottom: none; }
+
+  .item-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--border);
+    line-height: 1;
+    min-width: 2.5rem;
+  }
+
+  .item-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: .5rem;
+  }
+
+  .item-content p {
+    font-size: .875rem;
+    color: rgba(230,217,200,.65);
+    line-height: 1.75;
+  }
+
+  .assessoria-aside {
+    position: sticky;
+    top: 8rem;
+  }
+
+  .aside-card {
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    background: rgba(28,31,24,.6);
+  }
+
+  .aside-card p {
+    font-size: .9rem;
+    color: rgba(230,217,200,.7);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .aside-highlight {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--gold-light);
+    line-height: 1.5;
+    padding: 1.5rem;
+    border-left: 2px solid var(--gold);
+    background: rgba(146,101,47,.05);
+    margin-bottom: 2rem;
+  }
+
+  /* ── AREAS ── */
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-top: 3rem;
+    border: 1px solid var(--border);
+  }
+
+  .area-card {
+    background: var(--dark);
+    padding: 2.5rem;
+    transition: background .3s;
+    cursor: default;
+  }
+
+  .area-card:hover {
+    background: var(--mid);
+  }
+
+  .area-icon {
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .area-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: .75rem;
+    line-height: 1.3;
+  }
+
+  .area-card p {
+    font-size: .8rem;
+    color: rgba(230,217,200,.55);
+    line-height: 1.75;
+  }
+
+  .areas-cta {
+    margin-top: 2.5rem;
+    display: flex; justify-content: center;
+  }
+
+  /* ── SOBRE ── */
+  .sobre-section {
+    background: linear-gradient(135deg, #1c1f18 0%, #1c1f18 100%);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 6rem 0;
+  }
+
+  .sobre-section > .inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .sobre-text p {
+    font-size: .95rem;
+    color: rgba(230,217,200,.7);
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+  }
+
+  .sobre-atende {
+    margin: 2rem 0;
+  }
+
+  .sobre-atende h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .sobre-list {
+    list-style: none;
+    display: flex; flex-direction: column; gap: .4rem;
+  }
+
+  .sobre-list li {
+    font-size: .85rem;
+    color: rgba(230,217,200,.65);
+    padding-left: 1.25rem;
+    position: relative;
+  }
+
+  .sobre-list li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--gold);
+    font-size: .7rem;
+  }
+
+  .sobre-image-block {
+    position: relative;
+  }
+
+  .sobre-img-frame {
+    border: 1px solid var(--border);
+    aspect-ratio: 3/4;
+    background: linear-gradient(160deg, #252820, #1c1f18);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sobre-img-frame::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+    width: calc(100% - 3rem);
+    height: calc(100% - 3rem);
+    border: 1px solid var(--border);
+  }
+
+  .sobre-img-inner {
+    font-family: 'Cormorant Garamond', serif;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .sobre-img-inner .initials {
+    font-size: 5rem;
+    font-weight: 300;
+    color: var(--gold);
+    opacity: .3;
+    line-height: 1;
+  }
+
+  .sobre-img-inner .sobre-name {
+    font-size: 1.2rem;
+    color: var(--cream);
+    letter-spacing: .08em;
+    margin-top: 1rem;
+  }
+
+  .sobre-badge {
+    position: absolute;
+    bottom: -1rem;
+    left: -1rem;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 1rem 1.5rem;
+    font-size: .7rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* ── DIFERENCIAIS ── */
+  .diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .diferencial-item {
+    padding: 2rem;
+    border: 1px solid var(--border);
+    transition: border-color .3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .diferencial-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: var(--gold);
+    transform: scaleY(0);
+    transition: transform .4s;
+  }
+
+  .diferencial-item:hover::before { transform: scaleY(1); }
+  .diferencial-item:hover { border-color: rgba(146,101,47,.4); }
+
+  .diferencial-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--gold-light);
+    margin-bottom: .6rem;
+  }
+
+  .diferencial-item p {
+    font-size: .85rem;
+    color: rgba(230,217,200,.6);
+    line-height: 1.75;
+  }
+
+  /* ── DEPOIMENTOS ── */
+  .depoimentos-section {
+    background: var(--mid);
+    padding: 6rem 0;
+  }
+
+  .depoimentos-section > .inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+  }
+
+  .depoimento-placeholder {
+    border: 1px dashed var(--border);
+    padding: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .depoimento-placeholder p {
+    color: var(--text-muted);
+    font-size: .85rem;
+    font-style: italic;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .testimonial-card {
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    position: relative;
+  }
+
+  .testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 1rem; left: 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: var(--gold);
+    opacity: .15;
+    line-height: 1;
+  }
+
+  .testimonial-card p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: rgba(230,217,200,.8);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-author {
+    font-size: .75rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── FAQ ── */
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.5rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: var(--cream);
+    transition: color .3s;
+  }
+
+  .faq-question:hover { color: var(--gold); }
+
+  .faq-question .icon {
+    color: var(--gold);
+    font-size: 1.2rem;
+    transition: transform .3s;
+    flex-shrink: 0;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease;
+  }
+
+  .faq-answer p {
+    padding: 0 1.5rem 1.5rem;
+    font-size: .875rem;
+    color: rgba(230,217,200,.65);
+    line-height: 1.8;
+  }
+
+  .faq-item.open .faq-answer { max-height: 20rem; }
+  .faq-item.open .icon { transform: rotate(45deg); }
+  .faq-item.open { border-color: rgba(146,101,47,.4); }
+
+  .faq-cta { margin-top: 2.5rem; text-align: center; }
+
+  /* ── CTA FINAL ── */
+  .cta-final {
+    background: linear-gradient(135deg, #1c1f18 0%, #14130d 100%);
+    border-top: 1px solid var(--border);
+    padding: 8rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-final::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(146,101,47,.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-final h2 {
+    max-width: 50rem;
+    margin: 0 auto 1.5rem;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+  }
+
+  .cta-final p {
+    max-width: 42rem;
+    margin: 0 auto 3rem;
+    color: rgba(230,217,200,.65);
+    font-size: .95rem;
+    line-height: 1.8;
+  }
+
+  .cta-buttons {
+    display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;
+  }
+
+  .cta-micro {
+    margin-top: 2rem;
+    font-size: .75rem;
+    color: var(--text-muted);
+    letter-spacing: .08em;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #090906;
+    border-top: 1px solid var(--border);
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--cream);
+  }
+
+  .footer-logo span { color: var(--gold); }
+
+  .footer-mid {
+    font-size: .75rem;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .footer-right {
+    font-size: .75rem;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  /* ── KEN BURNS ── */
+  @keyframes kenBurns {
+    0%   { transform: scale(1) translateX(0); }
+    100% { transform: scale(1.08) translateX(-1.5%); }
+  }
+
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    animation: kenBurns 14s ease-in-out alternate infinite;
+    transform-origin: center top;
+  }
+
+  /* ── PROGRESS BAR ── */
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    background: var(--gold);
+    z-index: 1001;
+    width: 0%;
+    pointer-events: none;
+  }
+
+  /* ── HAMBURGER ── */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 201;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--cream);
+    transition: all .3s;
+  }
+
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  /* ── FOOTER LOGO ── */
+  .footer-logo-img {
+    height: 96px;
+    width: auto;
+    opacity: .9;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+  }
+
+  @keyframes slide {
+    0%   { transform: translateX(-100%); }
+    50%  { transform: translateX(100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* ── APPEAR ON SCROLL ── */
+  .appear {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .7s, transform .7s;
+  }
+
+  .appear.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1.2rem 2rem; }
+    .nav-hamburger { display: flex; }
+    .nav-cta { display: none; }
+    .nav-links {
+      position: fixed;
+      top: 0; right: -100%;
+      width: min(300px, 82vw);
+      height: 100vh;
+      background: #1c1f18;
+      border-left: 1px solid var(--border);
+      flex-direction: column;
+      gap: 0;
+      padding: 5rem 2rem 2rem;
+      transition: right .35s ease;
+      z-index: 200;
+    }
+    .nav-links.open { right: 0; }
+    .nav-links li a {
+      display: block;
+      padding: .9rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .9rem;
+    }
+    section { padding: 4rem 2rem; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 7rem 2rem 4rem; }
+    .para-quem-grid,
+    .assessoria-grid,
+    .sobre-section > .inner,
+    .faq-grid,
+    .testimonials-grid,
+    .diferenciais-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .areas-grid { grid-template-columns: 1fr 1fr; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .footer-right { text-align: center; }
+    .cta-final { padding: 5rem 2rem; }
+    .assessoria-section > .inner,
+    .sobre-section > .inner,
+    .depoimentos-section > .inner { padding: 0 2rem; }
+  }
+
+  @media (max-width: 560px) {
+    .areas-grid { grid-template-columns: 1fr; }
+  }
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- PROGRESS BAR -->
+<div class="progress-bar" id="progress-bar"></div>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="br-advocacia.html" class="nav-logo">
+    <img src="LOGOTIPO _ VARIACAO_ VERDE.png" alt="Beatriz Rosseto Advocacia Estratégica no Digital" class="nav-logo-img">
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="br-advocacia.html" class="active">Início</a></li>
+    <li><a href="assessoria-juridica.html">Assessoria</a></li>
+    <li><a href="areas-de-atuacao.html">Áreas de Atuação</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+  <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20Beatriz%20Rosseto%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." class="nav-cta" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section style="padding:0; max-width:none;" id="hero">
+  <div class="hero">
+    <div class="hero-left">
+      <span class="hero-eyebrow">Advocacia Estratégica no Digital</span>
+      <h1>O jurídico estratégico para <em>agências, influenciadores e marketing de influência</em></h1>
+      <p class="hero-sub">Contratos de campanha, proteção de imagem, direito de influência e assessoria contínua para agências de marketing, criadores de conteúdo e profissionais do mercado digital — com atuação 100% online em todo o Brasil.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20Beatriz!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." class="btn-primary" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a href="#assessoria" class="btn-secondary">Entender a assessoria →</a>
+      </div>
+      <p class="hero-micro">Atendimento 100% online · Agências de Marketing · Marketing de Influência · Criadores de Conteúdo</p>
+    </div>
+
+    <div class="hero-right">
+      <img src="foto-beatriz.jpeg.png" alt="Beatriz Rosseto – Advogada" class="hero-photo">
+      <div class="hero-label">
+        <div class="name">Beatriz Rosseto</div>
+        <div class="title-sub">Advogada · OAB/SP 498.119</div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PARA QUEM -->
+<section id="para-quem">
+  <div class="para-quem-grid">
+    <div class="appear">
+      <div class="section-label">Para quem é</div>
+      <h2>Advocacia focada em quem <em>vive do digital</em></h2>
+      <div class="para-quem-text">
+        <p>A Beatriz Rosseto Advocacia nasceu para atender quem construiu seu negócio na internet. Atuamos lado a lado com agências de marketing, criadores de conteúdo, influenciadores digitais e profissionais do marketing de influência que precisam de um suporte jurídico contínuo, claro e alinhado à realidade do mercado online.</p>
+      </div>
+      <div class="para-quem-quote">
+        Se o seu faturamento e a sua autoridade dependem da internet, faz sentido ter um jurídico que entenda isso na prática.
+      </div>
+    </div>
+    <div class="appear">
+      <ul class="profiles-list">
+        <li>Agências de marketing, propaganda e marketing de influência</li>
+        <li>Criadores de conteúdo e influenciadores digitais</li>
+        <li>Profissionais da área do marketing de influência</li>
+        <li>Prestadores de serviço da área de marketing</li>
+        <li>Marcas que trabalham com influenciadores</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ASSESSORIA -->
+<div class="assessoria-section" id="assessoria">
+  <div class="inner">
+    <div class="section-label appear">Assessoria jurídica</div>
+    <h2 class="appear">Assessoria jurídica contínua para o seu <em>negócio</em></h2>
+
+    <div class="assessoria-grid">
+      <div class="assessoria-items">
+        <div class="assessoria-item appear">
+          <div class="item-num">01</div>
+          <div class="item-content">
+            <h3>Prevenção de problemas</h3>
+            <p>Análise contratual de relações, parcerias, campanhas, colabs e lançamentos antes de ir a público.</p>
+          </div>
+        </div>
+        <div class="assessoria-item appear">
+          <div class="item-num">02</div>
+          <div class="item-content">
+            <h3>Orientação constante</h3>
+            <p>Canal direto para tirar dúvidas jurídicas sobre campanhas, parcerias, uso de imagem, bônus, garantias e muito mais.</p>
+          </div>
+        </div>
+        <div class="assessoria-item appear">
+          <div class="item-num">03</div>
+          <div class="item-content">
+            <h3>Documentação organizada</h3>
+            <p>Elaboração e revisão de contratos, termos de uso, políticas de compra, documentos de parcerias e coproduções.</p>
+          </div>
+        </div>
+        <div class="assessoria-item appear">
+          <div class="item-num">04</div>
+          <div class="item-content">
+            <h3>Atuação em crises</h3>
+            <p>Suporte jurídico em situações de exposição, ataques, pirataria, bloqueios de conta, cancelamentos e inadimplência.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="assessoria-aside appear">
+        <div class="aside-card">
+          <p>Contratar um advogado quando o problema está na sua frente pode ser a pior coisa a se fazer. A assessoria da BR Advocacia é pensada e estruturada para acompanhar sua empresa no dia a dia antecipando riscos, estruturando relações e agindo em situações de crise.</p>
+          <div class="aside-highlight">
+            A assessoria é personalizada: pode ir desde pontos específicos até um acompanhamento mais completo, de acordo com o momento do seu negócio.
+          </div>
+          <a href="assessoria-juridica.html" class="btn-secondary" style="display:inline-flex;">Saiba mais sobre a assessoria →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ÁREAS -->
+<section id="areas">
+  <div class="section-label appear">Áreas de atuação</div>
+  <h2 class="appear">Como protegemos o seu negócio <em>digital na prática</em></h2>
+
+  <div class="areas-grid appear">
+    <div class="area-card">
+      <div class="area-icon">📄</div>
+      <h3>Contratos de publicidade e influência</h3>
+      <p>Elaboração e revisão de contratos de campanha, publi, influência, representação de influenciadores, coprodução e parcerias estratégicas entre agências, marcas e criadores.</p>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">™️</div>
+      <h3>Proteção de marca e identidade</h3>
+      <p>Atuação em proteção de marca para infoprodutores, mentores, agências e criadores, com foco em fortalecer o nome e a identidade do projeto digital.</p>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">🛡️</div>
+      <h3>Remoção de conteúdo e pirataria</h3>
+      <p>Medidas jurídicas para remover conteúdo pirateado, uso indevido de imagem, difamação, exposições e ataques à reputação.</p>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">💰</div>
+      <h3>Inadimplência e recuperação de crédito</h3>
+      <p>Estruturação jurídica para reduzir inadimplência, cobrança adequada de alunos e clientes e ações para recuperação de crédito.</p>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">📸</div>
+      <h3>Direito de imagem e publicidade</h3>
+      <p>Contratos de publicidade e influência, proteção da imagem em campanhas com marcas, regras de uso de imagem, voz e conteúdos.</p>
+    </div>
+    <div class="area-card">
+      <div class="area-icon">🔓</div>
+      <h3>Recuperação de contas e plataformas</h3>
+      <p>Atuação em casos de bloqueio ou perda de contas em redes sociais e plataformas, quando houver fundamento jurídico para medidas extrajudiciais e judiciais.</p>
+    </div>
+  </div>
+
+  <div class="areas-cta appear">
+    <a href="areas-de-atuacao.html" class="btn-secondary">Ver todas as áreas de atuação →</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SOBRE -->
+<div class="sobre-section" id="sobre">
+  <div class="inner">
+    <div class="sobre-text appear">
+      <div class="section-label">Sobre a BR Advocacia</div>
+      <h2>Quem está por trás da <em>BR Advocacia</em></h2>
+      <p>A BR Advocacia é liderada por Beatriz Rosseto, advogada formada em Direito pela Universidade Santa Cecília, com pós-graduação em Propriedade Intelectual, cursos extensivos em Societário e Contratos, e pós-graduanda em Direito da Influência.</p>
+      <p>Cansada da advocacia tradicional e distante da realidade do cliente, Beatriz decidiu focar no mercado digital, especializando-se em agências de marketing, marketing de influência e criadores de conteúdo que precisam de clareza jurídica, proximidade e estratégia.</p>
+
+      <div class="sobre-atende">
+        <h4>Hoje, a BR Advocacia atende principalmente:</h4>
+        <ul class="sobre-list">
+          <li>Agências de marketing e propaganda, marketing de influência, coprodução e tráfego pago</li>
+          <li>Criadores de conteúdo e influenciadores digitais</li>
+          <li>Profissionais e empresas de marketing de influência</li>
+          <li>Gestores de tráfego e marketing digital</li>
+        </ul>
+      </div>
+
+      <a href="sobre.html" class="btn-secondary">Conheça a história completa →</a>
+    </div>
+
+    <div class="sobre-image-block appear">
+      <div class="sobre-img-frame">
+        <img src="foto-br-2.png" alt="Beatriz Rosseto – Advogada OAB/SP 498.119" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;display:block;animation:kenBurns 14s ease-in-out alternate infinite;transform-origin:center top;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais">
+  <div class="section-label appear">Por que BR Advocacia</div>
+  <h2 class="appear">Por que escolher a BR Advocacia para cuidar do seu <em>jurídico digital</em></h2>
+
+  <div class="diferenciais-grid">
+    <div class="diferencial-item appear">
+      <h3>Atendimento extremamente personalizado</h3>
+      <p>Você entende o que está sendo feito, por que está sendo feito e como isso impacta o seu negócio. Nada de respostas genéricas.</p>
+    </div>
+    <div class="diferencial-item appear">
+      <h3>Clareza e zero juridiquês</h3>
+      <p>Explicações diretas, em linguagem que você compreende. O objetivo é simplificar, não complicar.</p>
+    </div>
+    <div class="diferencial-item appear">
+      <h3>Proximidade real com o cliente</h3>
+      <p>A ideia é que você sinta que tem um jurídico ao seu lado, acompanhando lançamentos, parcerias e decisões importantes.</p>
+    </div>
+    <div class="diferencial-item appear">
+      <h3>Foco em prevenção — e ação quando necessário</h3>
+      <p>Estruturamos a base jurídica para evitar problemas, mas também atuamos em pirataria, conflitos, inadimplência e crises quando necessário.</p>
+    </div>
+    <div class="diferencial-item appear">
+      <h3>Experiência concreta no digital</h3>
+      <p>Atuação em casos de pirataria de infoprodutos, recuperação de crédito, venda e cessão de marca e conflitos entre parceiros do mercado digital.</p>
+    </div>
+    <div class="diferencial-item appear">
+      <h3>Atendimento 100% online para todo o Brasil</h3>
+      <p>Pensado para a rotina corrida de quem vive de conteúdo, lançamentos e serviços na internet.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DEPOIMENTOS -->
+<div class="depoimentos-section">
+  <div class="inner">
+    <div class="section-label appear">Depoimentos</div>
+    <h2 class="appear">Quem vive do digital já confia na <em>BR Advocacia</em></h2>
+
+    <div class="testimonials-grid appear">
+      <div class="testimonial-card">
+        <p>Organizamos todos os contratos do nosso lançamento com a BR Advocacia e, hoje, temos muito mais segurança nas parcerias e no relacionamento com alunos.</p>
+        <div class="testimonial-author">— Nome do Cliente · Mentor(a) de Marketing</div>
+      </div>
+      <div class="testimonial-card">
+        <p>A BR Advocacia nos ajudou a lidar com pirataria de infoproduto e com inadimplência, o que fez diferença direta no faturamento.</p>
+        <div class="testimonial-author">— Nome do Cliente · Infoprodutor(a)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-label appear">Dúvidas frequentes</div>
+  <h2 class="appear">Dúvidas de quem <em>chega até nós</em></h2>
+
+  <div class="faq-grid">
+    <div class="faq-item appear">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Tenho uma agência de marketing. A assessoria se aplica ao meu caso?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Sim. A BR Advocacia atende agências de marketing digital, publicidade e influência — incluindo agências de tráfego, social media, coprodução e as que intermediam campanhas entre marcas e influenciadores. Atuamos em contratos com clientes, contratos com criadores, proteção da operação e suporte jurídico recorrente para o dia a dia da agência.</p>
+      </div>
+    </div>
+
+    <div class="faq-item appear">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Sou criador de conteúdo e faço publis. Preciso de contrato para cada campanha?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Depende da situação, mas um contrato bem estruturado para publis e parcerias com marcas protege os dois lados e evita conflitos sobre entregáveis, prazo, exclusividade e uso da sua imagem. Podemos avaliar cada caso.</p>
+      </div>
+    </div>
+
+    <div class="faq-item appear">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Uma marca usou minha imagem sem autorização. Vocês resolvem isso?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Sim. Atuamos em casos de uso indevido de imagem, voz e conteúdos, com as medidas jurídicas extrajudiciais e judiciais cabíveis para cada situação.</p>
+      </div>
+    </div>
+
+    <div class="faq-item appear">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        O atendimento é pontual ou só por assessoria contínua?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Trabalhamos com os dois formatos: casos pontuais (contratos, remoção de conteúdo, proteção de marca etc.) e assessoria jurídica contínua para acompanhar o seu negócio de forma recorrente.</p>
+      </div>
+    </div>
+
+    <div class="faq-item appear">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        O atendimento é presencial ou 100% online?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Nosso atendimento é 100% online, o que permite atender clientes de qualquer lugar do Brasil com agilidade.</p>
+      </div>
+    </div>
+
+    <div class="faq-item appear">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Vocês atendem criadores de todos os portes?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Sim. Atendemos criadores, influenciadores e agências de todos os tamanhos. O que importa é a seriedade com que você trata o seu negócio, não o número de seguidores.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-cta appear">
+    <a href="faq.html" class="btn-secondary">Ver todas as dúvidas frequentes →</a>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <div class="section-label appear" style="justify-content:center;">Próximo passo</div>
+  <h2 class="appear">Pronto para ter um jurídico estratégico para o seu <em>negócio no digital?</em></h2>
+  <p class="appear">Se você tem uma agência de marketing, trabalha com marketing de influência ou é criador de conteúdo e quer crescer com segurança jurídica, a Beatriz Rosseto Advocacia está pronta para te acompanhar — da estruturação de contratos de campanha à proteção de marca, imagem e reputação.</p>
+
+  <div class="cta-buttons appear">
+    <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." class="btn-primary" target="_blank">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/></svg>
+      Falar no WhatsApp
+    </a>
+    <a href="#" class="btn-secondary">Enviar minha situação para análise →</a>
+  </div>
+
+  <p class="cta-micro appear">Atendimento 100% online · Atuação em todo o Brasil</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="simbolo-BRANCO.png" alt="BR Advocacia" class="footer-logo-img">
+  </div>
+  <div class="footer-mid">
+    Beatriz Rosseto · OAB/SP 498.119<br>
+    Santos, São Paulo · Atendimento online para todo o Brasil
+  </div>
+  <div class="footer-right">
+    <div style="display:flex;gap:1.5rem;justify-content:flex-end;flex-wrap:wrap;margin-bottom:.75rem;">
+      <a href="br-advocacia.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Início</a>
+      <a href="assessoria-juridica.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Assessoria</a>
+      <a href="areas-de-atuacao.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Áreas</a>
+      <a href="sobre.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Sobre</a>
+      <a href="faq.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">FAQ</a>
+      <a href="contato.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Contato</a>
+    </div>
+    <a href="politica-de-privacidade.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;display:block;text-align:right;margin-bottom:.4rem;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Política de Privacidade</a>
+    <span style="font-size:.75rem;color:var(--text-muted);">© 2025 Beatriz Rosseto Advocacia · Todos os direitos reservados</span>
+  </div>
+</footer>
+
+<script>
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Appear on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.appear').forEach(el => observer.observe(el));
+
+  // Progress bar
+  const progressBar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const total = document.body.scrollHeight - window.innerHeight;
+    progressBar.style.width = (total > 0 ? (window.scrollY / total) * 100 : 0) + '%';
+  }, { passive: true });
+
+  // Nav hide on scroll down / show on scroll up
+  const mainNav = document.getElementById('main-nav');
+  let lastScrollY = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > lastScrollY && y > 100) {
+      mainNav.style.transform = 'translateY(-100%)';
+    } else {
+      mainNav.style.transform = 'translateY(0)';
+    }
+    lastScrollY = y;
+  }, { passive: true });
+
+  // Mobile hamburger menu
+  (function () {
+    const btn = document.getElementById('nav-hamburger');
+    const links = document.getElementById('nav-links');
+    let overlay = null;
+
+    function openMenu() {
+      links.classList.add('open');
+      btn.classList.add('open');
+      btn.setAttribute('aria-label', 'Fechar menu');
+      overlay = document.createElement('div');
+      overlay.style.cssText = 'position:fixed;inset:0;z-index:150;background:rgba(0,0,0,.55);backdrop-filter:blur(2px);';
+      overlay.addEventListener('click', closeMenu);
+      document.body.appendChild(overlay);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      links.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-label', 'Abrir menu');
+      if (overlay) { overlay.remove(); overlay = null; }
+      document.body.style.overflow = '';
+    }
+
+    btn && btn.addEventListener('click', () => {
+      links.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    links && links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  })();
+</script>
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." target="_blank" rel="noopener" id="wa-float"
+   aria-label="Falar no WhatsApp"
+   style="position:fixed;bottom:1.75rem;right:1.75rem;z-index:999;
+          width:3.5rem;height:3.5rem;border-radius:50%;background:#25D366;
+          display:flex;align-items:center;justify-content:center;
+          box-shadow:0 4px 20px rgba(37,211,102,.45);transition:transform .3s,box-shadow .3s;
+          text-decoration:none;">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/>
+  </svg>
+</a>
+<style>
+#wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,.6); }
+@media(max-width:600px){ #wa-float{ bottom:1rem;right:1rem; } }
+</style>
+</body>
+</html>

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre a BR Advocacia | Jurídico para Negócios Digitais</title>
+<meta name="description" content="Conheça a BR Advocacia, liderada por Beatriz Rosseto, focada em mentores, criadores, infoprodutores e agências do mercado digital.">
+<meta property="og:title" content="Sobre a BR Advocacia – Beatriz Rosseto">
+<meta property="og:description" content="Conheça a BR Advocacia, liderada por Beatriz Rosseto, focada em mentores, criadores, infoprodutores e agências do mercado digital.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bradvocacia.com.br/sobre">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #E6D9C8;
+    --dark: #1C1F18;
+    --verde: #4F5742;
+    --marrom: #533C2A;
+    --gold: #92652F;
+    --gold-light: #B07A3E;
+    --mid: #252820;
+    --text-muted: #8A7A68;
+    --border: rgba(146,101,47,0.25);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--dark);
+    color: var(--cream);
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 9999; opacity: .35;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(28,31,24,.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo { display: flex; align-items: center; text-decoration: none; }
+  .nav-logo-img { height: 104px; width: auto; filter: invert(1) brightness(1.05); transition: opacity .3s; }
+  .nav-logo-img:hover { opacity: .75; }
+
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none;
+  }
+
+  .nav-links a {
+    font-size: .8rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color .3s;
+  }
+
+  .nav-links a:hover, .nav-links a.active { color: var(--cream); }
+
+  .nav-cta {
+    font-size: .75rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .65rem 1.5rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    transition: all .3s;
+  }
+
+  .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 10rem 4rem 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 6rem;
+    align-items: end;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-hero-eyebrow {
+    display: flex; align-items: center; gap: .75rem;
+    font-size: .7rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.75rem;
+  }
+
+  .page-hero-eyebrow::before {
+    content: '';
+    display: block; width: 2.5rem; height: 1px;
+    background: var(--gold);
+  }
+
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -.01em;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp .8s .3s forwards;
+  }
+
+  .page-hero h1 em { font-style: italic; color: var(--gold); }
+
+  .page-hero-desc {
+    font-size: 1rem;
+    color: rgba(230,217,200,.65);
+    max-width: 32rem;
+    line-height: 1.85;
+    opacity: 0;
+    animation: fadeUp .8s .5s forwards;
+  }
+
+  .page-hero-aside {
+    padding-bottom: 1rem;
+    opacity: 0;
+    animation: fadeUp .8s .7s forwards;
+  }
+
+  .hero-portrait {
+    border: 1px solid var(--border);
+    aspect-ratio: 3/4;
+    background: linear-gradient(160deg, #252820, #1c1f18);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+    max-height: 380px;
+  }
+
+  .hero-portrait::before {
+    content: '';
+    position: absolute;
+    top: 1rem; right: 1rem;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    border: 1px solid var(--border);
+  }
+
+  .portrait-inner {
+    text-align: center; z-index: 1;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .portrait-initials {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--gold);
+    opacity: .25;
+    line-height: 1;
+  }
+
+  .portrait-name {
+    font-size: 1.1rem;
+    color: var(--cream);
+    letter-spacing: .06em;
+    margin-top: .75rem;
+  }
+
+  .portrait-role {
+    font-size: .7rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: .4rem;
+  }
+
+  .hero-badges {
+    display: flex; flex-direction: column; gap: .5rem;
+    margin-top: 1.25rem;
+  }
+
+  .badge {
+    display: flex; align-items: center; gap: .75rem;
+    font-size: .75rem;
+    color: rgba(230,217,200,.6);
+    letter-spacing: .05em;
+  }
+
+  .badge::before {
+    content: '';
+    display: block; width: .4rem; height: .4rem;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ── CONTENT LAYOUT ── */
+  .content-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* ── SECTION BASE ── */
+  .sobre-section {
+    padding: 5rem 4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sobre-section.bg-mid {
+    background: var(--mid);
+    max-width: none;
+  }
+
+  .sobre-section.bg-mid .inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: flex; align-items: center; gap: .75rem;
+    font-size: .65rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block; width: 2rem; height: 1px;
+    background: var(--gold);
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  h2 em { font-style: italic; color: var(--gold); }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--gold-light);
+    margin-bottom: .6rem;
+  }
+
+  p {
+    font-size: .95rem;
+    color: rgba(230,217,200,.7);
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  /* ── TWO-COL TEXT ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 2rem;
+  }
+
+  /* ── ORIGIN SECTION ── */
+  .origin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .origin-problems {
+    margin: 2rem 0;
+  }
+
+  .origin-problems h4 {
+    font-size: .7rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .problem-list {
+    list-style: none;
+    display: flex; flex-direction: column; gap: .6rem;
+  }
+
+  .problem-list li {
+    display: flex; align-items: flex-start; gap: 1rem;
+    font-size: .9rem;
+    color: rgba(230,217,200,.65);
+    padding: .9rem 1.25rem;
+    border: 1px solid var(--border);
+    line-height: 1.5;
+  }
+
+  .problem-list li::before {
+    content: '—';
+    color: var(--gold);
+    font-size: .7rem;
+    margin-top: .15rem;
+    flex-shrink: 0;
+  }
+
+  .origin-aside {
+    display: flex; flex-direction: column; gap: 1.5rem;
+  }
+
+  .origin-card {
+    border: 1px solid var(--border);
+    padding: 2rem;
+    background: rgba(146,101,47,.04);
+  }
+
+  .origin-card .card-label {
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .origin-card ul {
+    list-style: none;
+    display: flex; flex-direction: column; gap: .45rem;
+  }
+
+  .origin-card ul li {
+    font-size: .85rem;
+    color: rgba(230,217,200,.65);
+    display: flex; align-items: center; gap: .75rem;
+  }
+
+  .origin-card ul li::before {
+    content: '→';
+    color: var(--gold);
+    font-size: .7rem;
+  }
+
+  .origin-quote {
+    background: var(--mid);
+    border-left: 2px solid var(--gold);
+    padding: 1.75rem 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: rgba(230,217,200,.8);
+    line-height: 1.6;
+    margin-top: 2rem;
+  }
+
+  /* ── BEATRIZ SECTION ── */
+  .beatriz-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .formation-block {
+    border: 1px solid var(--border);
+    padding: 2rem;
+  }
+
+  .formation-block .f-label {
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+    padding-bottom: .75rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .formation-list {
+    list-style: none;
+    display: flex; flex-direction: column; gap: .75rem;
+  }
+
+  .formation-list li {
+    font-size: .875rem;
+    color: rgba(230,217,200,.7);
+    display: flex; gap: .75rem; align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .formation-list li .dot {
+    width: .35rem; height: .35rem;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: .45rem;
+    flex-shrink: 0;
+  }
+
+  .atuacao-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .atu-block {
+    background: var(--mid);
+    padding: 1.5rem;
+    border-top: 2px solid var(--gold);
+  }
+
+  .atu-block h4 {
+    font-size: .7rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .atu-block ul {
+    list-style: none;
+    display: flex; flex-direction: column; gap: .4rem;
+  }
+
+  .atu-block ul li {
+    font-size: .8rem;
+    color: rgba(230,217,200,.6);
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .atu-block ul li::before {
+    content: '·';
+    position: absolute; left: 0;
+    color: var(--gold);
+  }
+
+  .casos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .caso-item {
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    font-size: .85rem;
+    color: rgba(230,217,200,.65);
+    display: flex; gap: .75rem; align-items: flex-start;
+  }
+
+  .caso-item::before {
+    content: '✓';
+    color: var(--gold);
+    flex-shrink: 0;
+    font-size: .75rem;
+  }
+
+  /* ── FORMA DE ATUAR ── */
+  .atuar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .atuar-card {
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    transition: border-color .3s;
+  }
+
+  .atuar-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform .4s;
+    transform-origin: left;
+  }
+
+  .atuar-card:hover::before { transform: scaleX(1); }
+  .atuar-card:hover { border-color: rgba(146,101,47,.4); }
+
+  .atuar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(146,101,47,.15);
+    line-height: 1;
+    margin-bottom: .75rem;
+  }
+
+  .atuar-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: .6rem;
+  }
+
+  .atuar-card p {
+    font-size: .85rem;
+    line-height: 1.75;
+  }
+
+  .rotina-tags {
+    display: flex; flex-wrap: wrap; gap: .5rem;
+    margin-top: 1.5rem;
+  }
+
+  .tag {
+    font-size: .7rem;
+    letter-spacing: .08em;
+    padding: .4rem .9rem;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  /* ── DIFERENCIAIS ── */
+  .diferenciais-list {
+    display: flex; flex-direction: column; gap: 0;
+    margin-top: 2rem;
+    border: 1px solid var(--border);
+  }
+
+  .dif-row {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 2rem;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+    transition: background .3s;
+  }
+
+  .dif-row:last-child { border-bottom: none; }
+  .dif-row:hover { background: rgba(146,101,47,.04); }
+
+  .dif-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--gold);
+    opacity: .5;
+    line-height: 1;
+  }
+
+  .dif-content h3 {
+    font-size: 1rem;
+    margin-bottom: .35rem;
+    color: var(--cream);
+  }
+
+  .dif-content p {
+    font-size: .85rem;
+    margin: 0;
+  }
+
+  /* ── VALORES ── */
+  .valores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+
+  .valor-item {
+    padding: 2rem 1.5rem;
+    background: var(--mid);
+    text-align: center;
+    border-top: 2px solid transparent;
+    transition: border-color .3s;
+  }
+
+  .valor-item:hover { border-top-color: var(--gold); }
+
+  .valor-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: .6rem;
+  }
+
+  .valor-desc {
+    font-size: .8rem;
+    color: rgba(230,217,200,.55);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* ── ATENDIMENTO ── */
+  .atendimento-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .canais {
+    display: flex; flex-direction: column; gap: .75rem;
+    margin-top: 1.25rem;
+  }
+
+  .canal {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    font-size: .875rem;
+    color: rgba(230,217,200,.7);
+  }
+
+  .canal-icon {
+    font-size: 1.2rem;
+    min-width: 1.5rem;
+    text-align: center;
+  }
+
+  .sede-card {
+    background: var(--mid);
+    border: 1px solid var(--border);
+    padding: 3rem;
+    position: relative;
+  }
+
+  .sede-card::after {
+    content: 'Santos / SP';
+    position: absolute;
+    bottom: 1.25rem; right: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--gold);
+    opacity: .08;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .sede-card h3 {
+    margin-bottom: 1rem;
+  }
+
+  .sede-card p {
+    font-size: .9rem;
+    line-height: 1.8;
+  }
+
+  /* ── CTA FINAL ── */
+  .cta-final {
+    background: linear-gradient(135deg, #1c1f18 0%, #14130d 100%);
+    padding: 7rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-final::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(146,101,47,.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cta-final h2 {
+    max-width: 46rem;
+    margin: 0 auto 1.5rem;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  }
+
+  .cta-final > p {
+    max-width: 38rem;
+    margin: 0 auto 3rem;
+    font-size: .95rem;
+  }
+
+  .cta-buttons {
+    display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;
+  }
+
+  /* ── BUTTONS ── */
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 1rem 2rem;
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    border: 1px solid rgba(230,217,200,.25);
+    color: var(--cream);
+    padding: 1rem 2rem;
+    font-size: .8rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s;
+  }
+
+  .btn-secondary:hover { border-color: var(--cream); transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #090906;
+    border-top: 1px solid var(--border);
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--cream);
+  }
+
+  .footer-logo span { color: var(--gold); }
+  .footer-logo-img { height: 96px; width: auto; opacity: .9; }
+
+  .footer-mid {
+    font-size: .75rem;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .footer-right {
+    font-size: .75rem;
+    color: var(--text-muted);
+    text-align: right;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .appear {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s, transform .7s;
+  }
+
+  .appear.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    nav { padding: 1.2rem 2rem; }
+    .nav-links { display: none; }
+    .page-hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 8rem 2rem 3rem; }
+    .page-hero-aside { display: none; }
+    .sobre-section { padding: 4rem 2rem; }
+    .origin-grid,
+    .beatriz-grid,
+    .atuar-grid,
+    .two-col,
+    .atendimento-row { grid-template-columns: 1fr; gap: 2rem; }
+    .valores-grid { grid-template-columns: repeat(2, 1fr); }
+    .casos-grid { grid-template-columns: 1fr; }
+    .atuacao-cols { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .footer-right { text-align: center; }
+    .cta-final { padding: 5rem 2rem; }
+  }
+
+  @media (max-width: 560px) {
+    .valores-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav>
+  <a href="br-advocacia.html" class="nav-logo"><img src="LOGOTIPO _ VARIACAO_ VERDE.png" alt="BR Advocacia" class="nav-logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="br-advocacia.html">Início</a></li>
+    <li><a href="assessoria-juridica.html">Assessoria</a></li>
+    <li><a href="areas-de-atuacao.html">Áreas de Atuação</a></li>
+    <li><a href="sobre.html" class="active">Sobre</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+  <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." class="nav-cta" target="_blank" rel="noopener">Falar no WhatsApp</a>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div>
+    <div class="page-hero-eyebrow" style="opacity:0;animation:fadeUp .8s .2s forwards;">Sobre a BR Advocacia</div>
+    <h1>Um escritório jurídico criado para quem <em>vive do digital</em></h1>
+    <p class="page-hero-desc">Advocacia focada em proteger juridicamente quem constrói autoridade, audiência e faturamento na internet — com clareza, proximidade e estratégia.</p>
+  </div>
+  <div class="page-hero-aside">
+    <div class="hero-portrait">
+      <img src="foto-br-2.png" alt="Beatriz Rosseto – Advogada OAB/SP 498.119" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
+    </div>
+    <div class="hero-badges">
+      <div class="badge">Pós-graduada em Propriedade Intelectual</div>
+      <div class="badge">Pós-graduanda em Direito da Influência</div>
+      <div class="badge">Atendimento 100% online · Todo o Brasil</div>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- 1. SOBRE MIM -->
+  <div class="sobre-section">
+    <div class="section-label appear">Sobre mim</div>
+    <div class="two-col">
+      <div class="appear">
+        <h2>Sou Beatriz Rosseto, advogada para <em>agências e o mercado de influência</em></h2>
+        <p>Criei a BR Advocacia para ser o jurídico que entende, na prática, a rotina de quem vive de conteúdo, campanhas e parcerias — sem distância, sem juridiquês e com estratégia.</p>
+        <p>Percebi que o mercado de influência crescia sem suporte jurídico compatível com sua velocidade. Tudo era formal demais, distante demais. Decidi mudar isso.</p>
+        <div class="formation-block" style="margin-top:1.75rem;">
+          <div class="f-label">Formação</div>
+          <ul class="formation-list">
+            <li><span class="dot"></span>Graduação em Direito · Universidade Santa Cecília</li>
+            <li><span class="dot"></span>Pós-graduação em Propriedade Intelectual</li>
+            <li><span class="dot"></span>Pós-graduanda em Direito da Influência</li>
+            <li><span class="dot"></span>Cursos extensivos em Direito Societário e Contratos</li>
+            <li><span class="dot"></span>OAB/SP 498.119</li>
+          </ul>
+        </div>
+      </div>
+      <div class="appear">
+        <div style="padding:1.75rem 2rem; border-left:2px solid var(--gold); background:var(--mid); font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-style:italic; color:rgba(230,217,200,.8); line-height:1.6; margin-bottom:1.75rem;">
+          Muita coisa nesse universo se resolve na boa estruturação contratual e preventiva — e não apenas na mão de um juiz.
+        </div>
+        <div class="casos-grid">
+          <div class="caso-item">Contratos de campanha e publicidade</div>
+          <div class="caso-item">Proteção e registro de marca</div>
+          <div class="caso-item">Conflitos contratuais no digital</div>
+          <div class="caso-item">Estruturação jurídica de agências</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. COMO TRABALHO -->
+  <div class="sobre-section bg-mid">
+    <div class="inner">
+      <div class="section-label appear">Como trabalho</div>
+      <h2 class="appear">Um jurídico que <em>caminha junto</em> com o negócio</h2>
+      <p class="appear" style="max-width:42rem;">Minha proposta não é ser apenas a "advogada de emergência" que aparece quando tudo já deu errado. É ser o jurídico que acompanha, previne e estrutura — e também age quando necessário.</p>
+
+      <div class="atuar-grid">
+        <div class="atuar-card appear">
+          <div class="atuar-num">01</div>
+          <h3>Entender antes de agir</h3>
+          <p>Antes de qualquer contrato ou ação, entendo como o cliente ganha dinheiro, se posiciona e se relaciona no mercado.</p>
+        </div>
+        <div class="atuar-card appear">
+          <div class="atuar-num">02</div>
+          <h3>Clareza em cada etapa</h3>
+          <p>Você sabe exatamente o que está sendo feito e por quê — sem juridiquês, sem respostas genéricas, sem distância.</p>
+        </div>
+        <div class="atuar-card appear">
+          <div class="atuar-num">03</div>
+          <h3>Prevenção primeiro, ação quando precisa</h3>
+          <p>O foco é sempre prevenir. Mas quando o problema já existe — pirataria, inadimplência, conflito — atuo com estratégia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. VALORES -->
+  <div class="sobre-section">
+    <div class="section-label appear">O que guia meu trabalho</div>
+    <h2 class="appear">Valores que guiam a <em>BR Advocacia</em></h2>
+
+    <div class="valores-grid appear">
+      <div class="valor-item">
+        <div class="valor-title">Clareza</div>
+        <p class="valor-desc">Você entende cada passo. Sem distância técnica, sem juridiquês desnecessário.</p>
+      </div>
+      <div class="valor-item">
+        <div class="valor-title">Prevenção</div>
+        <p class="valor-desc">Antecipo problemas antes que virem crises — contratos, marca, parcerias.</p>
+      </div>
+      <div class="valor-item">
+        <div class="valor-title">Proximidade</div>
+        <p class="valor-desc">Relação de parceria real, não de balcão. Acompanho o negócio no dia a dia.</p>
+      </div>
+      <div class="valor-item">
+        <div class="valor-title">Estratégia</div>
+        <p class="valor-desc">Visão de longo prazo — o jurídico como parte da estrutura do negócio, não como apêndice.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /content-wrap -->
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <div class="section-label appear" style="justify-content:center;">Próximo passo</div>
+  <h2 class="appear">Quer um jurídico que entenda o seu <em>negócio?</em></h2>
+  <p class="appear">Se você é agência de marketing, criador de conteúdo, profissional do mercado de influência ou prestador de serviço no digital e quer um jurídico que fale a sua língua, entenda o seu dia a dia e ajude a estruturar sua base jurídica com clareza e estratégia — estou pronta para caminhar ao seu lado.</p>
+  <div class="cta-buttons appear">
+    <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." class="btn-primary" target="_blank">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/></svg>
+      Falar no WhatsApp
+    </a>
+    <a href="areas-de-atuacao.html" class="btn-secondary">Conhecer as áreas de atuação →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><img src="simbolo-BRANCO.png" alt="BR Advocacia" class="footer-logo-img"></div>
+  <div class="footer-mid">
+    Beatriz Rosseto · OAB/SP 498.119<br>
+    Santos, São Paulo · Atendimento online para todo o Brasil
+  </div>
+  <div class="footer-right">
+    <div style="display:flex;gap:1.5rem;justify-content:flex-end;flex-wrap:wrap;margin-bottom:.75rem;">
+      <a href="br-advocacia.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Início</a>
+      <a href="assessoria-juridica.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Assessoria</a>
+      <a href="areas-de-atuacao.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Áreas</a>
+      <a href="sobre.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Sobre</a>
+      <a href="faq.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">FAQ</a>
+      <a href="contato.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Contato</a>
+    </div>
+    <a href="politica-de-privacidade.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;display:block;text-align:right;margin-bottom:.4rem;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Política de Privacidade</a>
+    <span style="font-size:.75rem;color:var(--text-muted);">© 2025 BR Advocacia · Todos os direitos reservados</span>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.appear').forEach(el => observer.observe(el));
+</script>
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." target="_blank" rel="noopener" id="wa-float"
+   aria-label="Falar no WhatsApp"
+   style="position:fixed;bottom:1.75rem;right:1.75rem;z-index:999;
+          width:3.5rem;height:3.5rem;border-radius:50%;background:#25D366;
+          display:flex;align-items:center;justify-content:center;
+          box-shadow:0 4px 20px rgba(37,211,102,.45);transition:transform .3s,box-shadow .3s;
+          text-decoration:none;">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/>
+  </svg>
+</a>
+<style>
+#wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,.6); }
+@media(max-width:600px){ #wa-float{ bottom:1rem;right:1rem; } }
+</style>
+</body>
+</html>

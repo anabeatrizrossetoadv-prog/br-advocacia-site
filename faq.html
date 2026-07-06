@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dúvidas Frequentes – BR Advocacia | Negócios Digitais</title>
+<meta name="description" content="Tire dúvidas sobre atendimento a mentores, criadores, infoprodutores e agências, assessoria jurídica, casos pontuais, pirataria, marca e mais.">
+<meta property="og:title" content="FAQ – Dúvidas Frequentes | BR Advocacia">
+<meta property="og:description" content="Tire dúvidas sobre atendimento a mentores, criadores, infoprodutores e agências, assessoria jurídica, casos pontuais, pirataria, marca e mais.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://bradvocacia.com.br/faq">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #E6D9C8;
+    --dark: #1C1F18;
+    --verde: #4F5742;
+    --marrom: #533C2A;
+    --gold: #92652F;
+    --gold-light: #B07A3E;
+    --mid: #252820;
+    --text-muted: #8A7A68;
+    --border: rgba(146,101,47,0.25);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--dark);
+    color: var(--cream);
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 9999; opacity: .35;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1.5rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(28,31,24,.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; }
+  .nav-logo-img { height: 104px; width: auto; filter: invert(1) brightness(1.05); transition: opacity .3s; }
+  .nav-logo-img:hover { opacity: .75; }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: .8rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none; transition: color .3s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--cream); }
+  .nav-cta {
+    font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
+    padding: .65rem 1.5rem; border: 1px solid var(--gold);
+    color: var(--gold); text-decoration: none; transition: all .3s;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    padding: 9rem 4rem 5rem;
+    max-width: 1400px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.2fr 1fr;
+    gap: 5rem; align-items: end;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    display: flex; align-items: center; gap: .75rem;
+    font-size: .7rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.75rem;
+    opacity: 0; animation: fadeUp .8s .2s forwards;
+  }
+  .eyebrow::before {
+    content: ''; display: block; width: 2.5rem; height: 1px; background: var(--gold);
+  }
+
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem;
+    opacity: 0; animation: fadeUp .8s .35s forwards;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--gold); }
+
+  .page-hero p {
+    font-size: .975rem; color: rgba(230,217,200,.65);
+    max-width: 34rem; line-height: 1.85;
+    opacity: 0; animation: fadeUp .8s .5s forwards;
+  }
+
+  /* ── CATEGORY PILLS ── */
+  .cat-nav {
+    max-width: 1400px; margin: 0 auto;
+    padding: 2rem 4rem;
+    display: flex; flex-wrap: wrap; gap: .6rem;
+    border-bottom: 1px solid var(--border);
+    opacity: 0; animation: fadeUp .8s .65s forwards;
+  }
+
+  .cat-pill {
+    font-size: .7rem; letter-spacing: .1em; text-transform: uppercase;
+    padding: .55rem 1.1rem; border: 1px solid var(--border);
+    color: var(--text-muted); text-decoration: none;
+    transition: all .3s; cursor: pointer; background: none;
+    white-space: nowrap;
+  }
+  .cat-pill:hover, .cat-pill.active {
+    border-color: var(--gold); color: var(--gold);
+  }
+  .cat-pill.active { background: rgba(146,101,47,.08); }
+
+  /* ── FAQ LAYOUT ── */
+  .faq-wrap {
+    max-width: 760px; margin: 0 auto;
+    padding: 4rem;
+  }
+
+  /* ── SIDEBAR ── */
+  .faq-sidebar {
+    position: sticky; top: 6rem;
+  }
+
+  .sidebar-section { margin-bottom: 2.5rem; }
+
+  .sidebar-label {
+    font-size: .65rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem;
+    padding-bottom: .6rem; border-bottom: 1px solid var(--border);
+  }
+
+  .sidebar-links { list-style: none; display: flex; flex-direction: column; gap: .2rem; }
+  .sidebar-links a {
+    display: flex; align-items: center; gap: .75rem;
+    font-size: .825rem; color: rgba(230,217,200,.55);
+    text-decoration: none; padding: .55rem .75rem;
+    border-left: 2px solid transparent;
+    transition: all .25s; line-height: 1.4;
+  }
+  .sidebar-links a:hover { color: var(--cream); border-left-color: var(--gold); padding-left: 1rem; }
+  .sidebar-links a.active { color: var(--gold); border-left-color: var(--gold); }
+
+  .sidebar-cta {
+    background: rgba(146,101,47,.06);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  .sidebar-cta p {
+    font-size: .8rem; color: rgba(230,217,200,.6);
+    line-height: 1.7; margin-bottom: 1rem;
+  }
+  .sidebar-cta a {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold); text-decoration: none;
+    transition: color .3s;
+  }
+  .sidebar-cta a:hover { color: var(--gold-light); }
+
+  /* ── FAQ MAIN ── */
+  .faq-main { }
+
+  .faq-group { margin-bottom: 3.5rem; }
+  .faq-group:last-child { margin-bottom: 0; }
+
+  .group-header {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .group-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; color: var(--gold); opacity: .5;
+    line-height: 1;
+  }
+  .group-title {
+    font-size: .7rem; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .faq-items { display: flex; flex-direction: column; gap: .75rem; }
+
+  .faq-item {
+    border: 1px solid var(--border); overflow: hidden;
+    transition: border-color .3s;
+  }
+  .faq-item.open { border-color: rgba(146,101,47,.45); }
+
+  .faq-q {
+    width: 100%; background: none; border: none;
+    padding: 1.5rem 1.75rem; text-align: left; cursor: pointer;
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem;
+    transition: background .2s;
+  }
+  .faq-q:hover { background: rgba(146,101,47,.03); }
+  .faq-item.open .faq-q { background: rgba(146,101,47,.04); }
+
+  .faq-q-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; color: var(--cream);
+    line-height: 1.4; text-align: left;
+    transition: color .3s;
+  }
+  .faq-q:hover .faq-q-text { color: var(--gold-light); }
+  .faq-item.open .faq-q-text { color: var(--gold-light); }
+
+  .faq-icon {
+    width: 1.5rem; height: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); font-size: .85rem;
+    transition: transform .3s, background .3s, border-color .3s;
+    flex-shrink: 0; margin-top: .1rem;
+  }
+  .faq-item.open .faq-icon {
+    transform: rotate(45deg);
+    background: var(--gold); color: var(--dark);
+    border-color: var(--gold);
+  }
+
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height .45s ease;
+  }
+  .faq-item.open .faq-a { max-height: 30rem; }
+
+  .faq-a-inner {
+    padding: 0 1.75rem 1.75rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-a-inner p {
+    font-size: .9rem; color: rgba(230,217,200,.68);
+    line-height: 1.85; margin-top: 1.25rem;
+  }
+
+  .faq-a-inner ul {
+    list-style: none; display: flex; flex-direction: column; gap: .45rem;
+    margin-top: .85rem;
+  }
+  .faq-a-inner ul li {
+    font-size: .875rem; color: rgba(230,217,200,.65);
+    display: flex; gap: .75rem; align-items: flex-start; line-height: 1.65;
+  }
+  .faq-a-inner ul li::before {
+    content: '→'; color: var(--gold); font-size: .65rem;
+    flex-shrink: 0; margin-top: .3rem;
+  }
+
+  .faq-a-inner .note {
+    margin-top: 1rem;
+    padding: .85rem 1.1rem;
+    background: rgba(146,101,47,.06);
+    border-left: 2px solid rgba(146,101,47,.4);
+    font-size: .825rem; color: rgba(230,217,200,.55);
+    line-height: 1.7;
+  }
+
+  /* ── STILL HAVE QUESTIONS ── */
+  .still-questions {
+    max-width: 1400px; margin: 0 auto;
+    padding: 4rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .sq-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 1px; background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  .sq-card {
+    background: var(--dark); padding: 2.5rem 2rem;
+    display: flex; flex-direction: column; gap: 1rem;
+    transition: background .3s;
+  }
+  .sq-card:hover { background: var(--mid); }
+
+  .sq-icon { font-size: 1.5rem; }
+
+  .sq-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400; color: var(--cream);
+  }
+  .sq-card p {
+    font-size: .85rem; color: rgba(230,217,200,.6); line-height: 1.75; flex: 1;
+  }
+  .sq-card a {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-size: .75rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--gold); text-decoration: none; transition: color .3s;
+    margin-top: .5rem;
+  }
+  .sq-card a:hover { color: var(--gold-light); }
+
+  /* ── CTA FINAL ── */
+  .cta-final {
+    padding: 7rem 4rem; text-align: center;
+    position: relative; overflow: hidden;
+    border-top: 1px solid var(--border);
+  }
+  .cta-final::before {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(146,101,47,.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-final h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 300; line-height: 1.2;
+    max-width: 44rem; margin: 0 auto 1.5rem;
+  }
+  .cta-final h2 em { font-style: italic; color: var(--gold); }
+  .cta-final > p { max-width: 38rem; margin: 0 auto 3rem; font-size: .95rem; color: rgba(230,217,200,.65); line-height: 1.85; }
+  .cta-buttons { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--gold); color: var(--dark);
+    padding: 1rem 2rem; font-size: .8rem; font-weight: 500;
+    letter-spacing: .1em; text-transform: uppercase;
+    text-decoration: none; transition: all .3s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    border: 1px solid rgba(230,217,200,.25); color: var(--cream);
+    padding: 1rem 2rem; font-size: .8rem;
+    letter-spacing: .1em; text-transform: uppercase;
+    text-decoration: none; transition: all .3s;
+  }
+  .btn-secondary:hover { border-color: var(--cream); transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #090906; border-top: 1px solid var(--border);
+    padding: 3rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--cream); }
+  .footer-logo span { color: var(--gold); }
+  .footer-logo-img { height: 96px; width: auto; opacity: .9; }
+  .footer-mid { font-size: .75rem; color: var(--text-muted); text-align: center; line-height: 1.6; }
+  .footer-right { font-size: .75rem; color: var(--text-muted); text-align: right; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .appear { opacity: 0; transform: translateY(28px); transition: opacity .7s, transform .7s; }
+  .appear.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .faq-wrap { grid-template-columns: 1fr; gap: 2rem; }
+    .faq-sidebar { position: static; }
+    .sidebar-links { display: none; }
+  }
+  @media (max-width: 960px) {
+    nav { padding: 1.2rem 2rem; }
+    .nav-links { display: none; }
+    .page-hero { grid-template-columns: 1fr; gap: 2rem; padding: 8rem 2rem 3rem; }
+    .cat-nav { padding: 1.5rem 2rem; }
+    .faq-wrap { padding: 3rem 2rem; }
+    .still-questions { padding: 3rem 2rem; }
+    .sq-grid { grid-template-columns: 1fr; }
+    .cta-final { padding: 5rem 2rem; }
+    footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .footer-right { text-align: center; }
+  }
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav>
+  <a href="br-advocacia.html" class="nav-logo"><img src="LOGOTIPO _ VARIACAO_ VERDE.png" alt="BR Advocacia" class="nav-logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="br-advocacia.html">Início</a></li>
+    <li><a href="assessoria-juridica.html">Assessoria</a></li>
+    <li><a href="areas-de-atuacao.html">Áreas de Atuação</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="faq.html" class="active">FAQ</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+  <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." class="nav-cta" target="_blank" rel="noopener">Falar no WhatsApp</a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div>
+    <div class="eyebrow">Dúvidas Frequentes</div>
+    <h1>Respostas para quem <em>vive do digital</em></h1>
+    <p>Perguntas reais de agências de marketing, criadores de conteúdo e profissionais do mercado de influência.</p>
+  </div>
+  <div style="opacity:0;animation:fadeUp .8s .5s forwards;">
+    <div style="border:1px solid var(--border);padding:2rem;background:rgba(146,101,47,.03);">
+      <div style="font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Não encontrou sua dúvida?</div>
+      <p style="font-size:.875rem;color:rgba(230,217,200,.65);line-height:1.8;margin-bottom:1.25rem;">Fale diretamente com a BR Advocacia. Explique sua situação em poucas linhas e retornamos com as orientações iniciais.</p>
+      <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." target="_blank" style="display:inline-flex;align-items:center;gap:.6rem;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/></svg>
+        Enviar minha dúvida no WhatsApp →
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ CONTENT -->
+<div class="faq-wrap">
+  <main class="faq-main">
+
+    <!-- Para quem é -->
+    <div class="faq-group appear">
+      <div class="group-header">
+        <span class="group-title">Para quem é</span>
+      </div>
+      <div class="faq-items">
+
+        <div class="faq-item" id="q1">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Tenho uma agência de marketing. A assessoria jurídica é pra mim?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Sim. A BR Advocacia atende agências de marketing digital, publicidade e marketing de influência — desde quem está formalizando os primeiros contratos até operações consolidadas com múltiplas campanhas e carteira de influenciadores.</p>
+              <p>Atua com contratos de prestação de serviços, proteção de marca, gestão de crises, inadimplência e estruturação jurídica da operação.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="q2">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Sou criador de conteúdo ou influenciador. O que a BR Advocacia resolve para mim?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Contratos de publi, colabs e parcerias com marcas, proteção da sua imagem e marca pessoal, uso indevido do seu nome ou conteúdo, inadimplência de clientes e estruturação jurídica da sua carreira.</p>
+              <p>A ideia é que você feche contratos e parcerias com segurança — e saiba como agir quando algo não sai como combinado.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="q3">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Só atendem grandes operações ou também quem está começando?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>A BR Advocacia atende dos dois tamanhos. O mais importante não é o porte — é a seriedade com que você trata o seu negócio.</p>
+              <p>Para quem está começando, contratos bem feitos desde o início evitam a maioria dos problemas que aparecem depois.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- O que a BR Advocacia faz -->
+    <div class="faq-group appear">
+      <div class="group-header">
+        <span class="group-title">O que a BR Advocacia faz</span>
+      </div>
+      <div class="faq-items">
+
+        <div class="faq-item" id="q4">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Fazem contratos para campanhas, publis e colabs com marcas?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Sim. A BR Advocacia elabora e revisa contratos de campanha, publicidade, colabs, representação de influenciadores, parcerias entre agências e marcas, e coproduções.</p>
+              <p>O objetivo é deixar claro: o que será entregue, por qual meio, em qual prazo, como é a divisão de responsabilidades — e o que acontece se algo não for cumprido.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="q5">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Meu nome, imagem ou marca está sendo usado sem autorização. Podem ajudar?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Sim. A BR Advocacia atua na proteção de marca, direito de imagem e identidade no digital — tanto para criadores quanto para agências.</p>
+              <p>Notifica quem está usando sem autorização, solicita remoção do conteúdo e avalia possibilidade de indenização, quando houver cabimento.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="q6">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">A BR Advocacia resolve casos pontuais ou só faz assessoria contínua?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>A BR Advocacia trabalha das duas formas:</p>
+              <ul>
+                <li><strong style="color:var(--cream);font-weight:500;">Caso pontual:</strong> elaboração ou revisão de contrato, registro de marca, uso indevido de imagem, análise de campanha, entre outros.</li>
+                <li><strong style="color:var(--cream);font-weight:500;">Assessoria contínua:</strong> acompanhamento recorrente da operação, com orientações constantes, análise preventiva e suporte em situações de risco.</li>
+              </ul>
+              <div class="note">Na prática, muitos clientes que chegam por uma demanda pontual migram para a assessoria ao perceber os benefícios do acompanhamento contínuo.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Como funciona -->
+    <div class="faq-group appear">
+      <div class="group-header">
+        <span class="group-title">Como funciona</span>
+      </div>
+      <div class="faq-items">
+
+        <div class="faq-item" id="q7">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">O atendimento é 100% online?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>Sim. O atendimento da BR Advocacia é 100% online para todo o Brasil — reuniões, envio de documentos, assinaturas e acompanhamento feitos de forma digital, com segurança e validade jurídica.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" id="q8">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Como é o primeiro contato? Tem algum custo?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">
+              <p>O primeiro contato não tem custo. Você pode falar pelo WhatsApp ou preencher o formulário — explique sua situação em poucas linhas e a BR Advocacia retorna com as orientações iniciais.</p>
+              <p>A proposta de honorários, quando houver, é apresentada de forma clara e transparente antes de qualquer compromisso.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- STILL HAVE QUESTIONS -->
+<div class="still-questions">
+  <div class="sq-grid appear">
+    <div class="sq-card">
+      <div class="sq-icon">💬</div>
+      <h3>Fale pelo WhatsApp</h3>
+      <p>O jeito mais rápido. Explique sua situação em poucas linhas e a Beatriz retorna com as orientações iniciais.</p>
+      <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." target="_blank">Abrir conversa →</a>
+    </div>
+    <div class="sq-card">
+      <div class="sq-icon">⚖️</div>
+      <h3>Conheça as áreas de atuação</h3>
+      <p>Veja em detalhes todas as frentes jurídicas em que a BR Advocacia atua para negócios digitais.</p>
+      <a href="areas-de-atuacao.html">Ver áreas de atuação →</a>
+    </div>
+    <div class="sq-card">
+      <div class="sq-icon">📋</div>
+      <h3>Entenda a assessoria jurídica</h3>
+      <p>Saiba como funciona a assessoria contínua da BR Advocacia e o que está incluído em cada frente.</p>
+      <a href="assessoria-juridica.html">Ver assessoria →</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<div class="cta-final">
+  <div style="display:flex;align-items:center;gap:.75rem;justify-content:center;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;" class="appear">
+    <span style="display:block;width:2rem;height:1px;background:var(--gold);"></span>
+    Próximo passo
+  </div>
+  <h2 class="appear">Sua dúvida foi respondida? Então é hora de dar o <em>próximo passo.</em></h2>
+  <p class="appear">Se você é agência de marketing, criador de conteúdo, profissional do mercado de influência ou prestador de serviço no digital, a BR Advocacia está pronta para atuar ao seu lado.</p>
+  <div class="cta-buttons appear">
+    <a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." class="btn-primary" target="_blank">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/></svg>
+      Falar no WhatsApp
+    </a>
+    <a href="areas-de-atuacao.html" class="btn-secondary">Ver áreas de atuação →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><img src="simbolo-BRANCO.png" alt="BR Advocacia" class="footer-logo-img"></div>
+  <div class="footer-mid">
+    Beatriz Rosseto · OAB/SP 498.119<br>
+    Santos, São Paulo · Atendimento online para todo o Brasil
+  </div>
+  <div class="footer-right">
+    <div style="display:flex;gap:1.5rem;justify-content:flex-end;flex-wrap:wrap;margin-bottom:.75rem;">
+      <a href="br-advocacia.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Início</a>
+      <a href="assessoria-juridica.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Assessoria</a>
+      <a href="areas-de-atuacao.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Áreas</a>
+      <a href="sobre.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Sobre</a>
+      <a href="faq.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">FAQ</a>
+      <a href="contato.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Contato</a>
+    </div>
+    <a href="politica-de-privacidade.html" style="font-size:.75rem;color:var(--text-muted);text-decoration:none;display:block;text-align:right;margin-bottom:.4rem;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">Política de Privacidade</a>
+    <span style="font-size:.75rem;color:var(--text-muted);">© 2025 BR Advocacia · Todos os direitos reservados</span>
+  </div>
+</footer>
+
+<script>
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Category filter
+  function filterCat(cat, pill) {
+    // Update pills
+    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+
+    // Show/hide groups
+    document.querySelectorAll('.faq-group').forEach(group => {
+      if (cat === 'all') {
+        group.style.display = '';
+        return;
+      }
+      const cats = group.dataset.cats || '';
+      group.style.display = cats.includes(cat) ? '' : 'none';
+    });
+
+    // Show/hide individual items (for mixed groups)
+    document.querySelectorAll('.faq-item').forEach(item => {
+      if (cat === 'all') {
+        item.style.display = '';
+        return;
+      }
+      item.style.display = item.dataset.cat === cat ? '' : 'none';
+    });
+
+    // Re-show groups that have visible items
+    if (cat !== 'all') {
+      document.querySelectorAll('.faq-group').forEach(group => {
+        const visibleItems = group.querySelectorAll('.faq-item:not([style*="display: none"])');
+        group.style.display = visibleItems.length > 0 ? '' : 'none';
+      });
+    }
+  }
+
+  // Scroll spy for sidebar
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.appear').forEach(el => observer.observe(el));
+
+  // Sidebar active link on scroll
+  const sideLinks = document.querySelectorAll('.sidebar-links a');
+  const faqItems = document.querySelectorAll('.faq-item[id]');
+
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        sideLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.sidebar-links a[href="#${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.6 });
+
+  faqItems.forEach(item => spyObserver.observe(item));
+</script>
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/5513991358613?text=Ol%C3%A1%2C%20BR%20Advocacia!%20Encontrei%20o%20site%20e%20gostaria%20de%20falar%20sobre%20o%20jur%C3%ADdico%20do%20meu%20neg%C3%B3cio%20digital." target="_blank" rel="noopener" id="wa-float"
+   aria-label="Falar no WhatsApp"
+   style="position:fixed;bottom:1.75rem;right:1.75rem;z-index:999;
+          width:3.5rem;height:3.5rem;border-radius:50%;background:#25D366;
+          display:flex;align-items:center;justify-content:center;
+          box-shadow:0 4px 20px rgba(37,211,102,.45);transition:transform .3s,box-shadow .3s;
+          text-decoration:none;">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.557 4.126 1.524 5.867L0 24l6.254-1.496A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.371l-.36-.214-3.72.89.933-3.61-.235-.371A9.818 9.818 0 1112 21.818z"/>
+  </svg>
+</a>
+<style>
+#wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,.6); }
+@media(max-width:600px){ #wa-float{ bottom:1rem;right:1rem; } }
+</style>
+</body>
+</html>
